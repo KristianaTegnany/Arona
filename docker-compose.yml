@@ -14,7 +14,7 @@ services:
       dockerfile: Dockerfile
     environment:
       authtoken: 3NmgMiQTtyKgndgsv4jpH_3RdkiJzH5DpiBbZFd8qSY
-      ports: 8000
+      port: 172.21.0.2:8000
       webhookUrl: https://developers.facebook.com/apps/336380870334023/webhooks/
     volumes:
       - ./ngrok-server/:/app/

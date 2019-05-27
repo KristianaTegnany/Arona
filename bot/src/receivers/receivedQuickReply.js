@@ -9,7 +9,8 @@ import {
   sendServicesQuickReply,
   sendSearchTypeQuickReply,
   sendGoogleQuickReply,
-  sendHomeMessageQuickReply
+  sendHomeMessageQuickReply,
+  sendAskNumberSMS
 } from "../senders";
 import { getter, setter } from "../sessions";
 import redisClient from "../sessions/redisClient";
@@ -21,7 +22,7 @@ import download_apk from "../core/apk/download_apk";
 import processTranslate from "../core/translate/process";
 import { runGame, startGame } from "../core/akinator/akinator-module";
 import { search } from "../core/youtube";
-import sendTypeLetterQuickReply from "../senders/sendServicesQuickReply"
+import sendTypeLetterQuickReply from "../senders/sendServicesQuickReply";
 export default function(event, userSession) {
   let senderID = event.sender.id;
   let recipientID = event.recipient.id;
@@ -73,8 +74,7 @@ export default function(event, userSession) {
     } catch (error) {
       handleQuickReply(senderID, userSession, message);
     }
-  } 
-  else {
+  } else {
     handleQuickReply(senderID, userSession, message);
   }
 }
@@ -135,7 +135,12 @@ function handleQuickReply(senderID, userSession, message) {
       });
       break;
     case "google_search.web":
-      sendGoogleQuickReply(senderID, userSession,locales.ask_web_google_search_keyword[lang],"google_search");
+      sendGoogleQuickReply(
+        senderID,
+        userSession,
+        locales.ask_web_google_search_keyword[lang],
+        "google_search"
+      );
       getter(senderID, function(obj) {
         new_obj = {
           lang: obj.lang
@@ -146,7 +151,12 @@ function handleQuickReply(senderID, userSession, message) {
       });
       break;
     case "google_search.image":
-      sendGoogleQuickReply(senderID, userSession,locales.ask_image_google_search_keyword[lang],"google_search");
+      sendGoogleQuickReply(
+        senderID,
+        userSession,
+        locales.ask_image_google_search_keyword[lang],
+        "google_search"
+      );
       getter(senderID, function(obj) {
         new_obj = {
           lang: obj.lang
@@ -192,9 +202,15 @@ function handleQuickReply(senderID, userSession, message) {
       forceSendFile(senderID, userSession, linux_merger_path, function() {});
       break;
     case "bus":
-      new_obj.lang = userSession.lang;
-      setter(senderID, new_obj);
-      sendServicesQuickReply(senderID, userSession, locales.ask_bus_arrival[lang], "bus")
+      let _new_obj = {};
+      _new_obj.lang = userSession.lang;
+      setter(senderID, _new_obj);
+      sendServicesQuickReply(
+        senderID,
+        userSession,
+        locales.ask_bus_arrival[lang],
+        "bus"
+      );
       console.log("tonga eto");
       getter(senderID, function(obj) {
         obj["bus"] = {
@@ -207,22 +223,21 @@ function handleQuickReply(senderID, userSession, message) {
       break;
 
     case "letter":
-      console.log("Modele de lettre", userSession)
-      sendTypeLetterQuickReply(senderID, userSession, locales.ask_letter_type[lang])
-      getter(senderID, function(obj) {
-        new_obj = {
-          lang: obj.lang,
-        };
-        new_obj["letter_model"] = true;
-        setter(senderID, new_obj);
-        // client.set(senderID, JSON.stringify(obj))
-      });
-      sendServicesQuickReply(senderID, userSession, locales.ask_bus_arrival[lang], "letter")
+      let new_obj = {};
+      new_obj.lang = userSession.lang;
+      setter(senderID, new_obj);
+      //sendServicesQuickReply(senderID, userSession, locales.ask_letter_type[lang], "letter_model")
+      sendTypeLetterQuickReply(
+        senderID,
+        userSession,
+        locales.ask_letter_type[lang]
+      );
 
       break;
 
     case "sms":
       getter(senderID, function(obj) {
+        let new_obj = {};
         new_obj.lang = obj.lang;
         new_obj["sms"] = true;
         setter(senderID, new_obj);
@@ -230,53 +245,56 @@ function handleQuickReply(senderID, userSession, message) {
       sendAskNumberSMS(senderID, userSession);
       break;
 
-
     //Modifications
-    case 'translate.fr':
-        processTranslate(senderID, userSession,"fr");
-        break ;
-    case 'translate.en':
-        processTranslate(senderID, userSession,"en");
-        break ;
-    case 'translate.mg':
-        processTranslate(senderID, userSession,"mg");
-        break ;
+    case "translate.fr":
+      processTranslate(senderID, userSession, "fr");
+      break;
+    case "translate.en":
+      processTranslate(senderID, userSession, "en");
+      break;
+    case "translate.mg":
+      processTranslate(senderID, userSession, "mg");
+      break;
 
     case "translate":
-        sendGoogleQuickReply(senderID,userSession,locales.ask_translate[lang],"translate")
-        //sendTextMessage(senderID, locales.ask_translate[lang]);
-        getter(senderID, function(obj) {
-          new_obj.lang = obj.lang;
-          new_obj["translate"] = true;
-          setter(senderID, new_obj);
-          // client.set(senderID, JSON.stringify(obj))
-        });
-        break ;
+      sendGoogleQuickReply(
+        senderID,
+        userSession,
+        locales.ask_translate[lang],
+        "translate"
+      );
+      //sendTextMessage(senderID, locales.ask_translate[lang]);
+      getter(senderID, function(obj) {
+        new_obj.lang = obj.lang;
+        new_obj["translate"] = true;
+        setter(senderID, new_obj);
+        // client.set(senderID, JSON.stringify(obj))
+      });
+      break;
     case "google_search":
-        sendSearchTypeQuickReply(senderID, locales.ask_searchType[lang]);
-        getter(senderID, function(obj) {
-          new_obj.lang = obj.lang;
-          new_obj["google_search"] = true;
-          setter(senderID, new_obj);
-          // client.set(senderID, JSON.stringify(obj))
-        });
-        break ;
+      sendSearchTypeQuickReply(senderID, locales.ask_searchType[lang]);
+      getter(senderID, function(obj) {
+        new_obj.lang = obj.lang;
+        new_obj["google_search"] = true;
+        setter(senderID, new_obj);
+        // client.set(senderID, JSON.stringify(obj))
+      });
+      break;
     case "download_apk":
-        getter(senderID, function(obj) {
-          new_obj.lang = obj.lang;
-          new_obj["download_apk"] = true;
-          setter(senderID, new_obj);
-        });
-  
-        sendHomeMessageQuickReply(
-          senderID,
-          userSession,
-          locales.ask_apk_keyword[userSession.lang],
-          function() {}
-        );
-        break ;
+      getter(senderID, function(obj) {
+        new_obj.lang = obj.lang;
+        new_obj["download_apk"] = true;
+        setter(senderID, new_obj);
+      });
 
-    
+      sendHomeMessageQuickReply(
+        senderID,
+        userSession,
+        locales.ask_apk_keyword[userSession.lang],
+        function() {}
+      );
+      break;
+
     default:
       if (userSession.download_apk) {
         let apk_folder = `./temp/Apk/`;

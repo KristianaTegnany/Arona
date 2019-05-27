@@ -29,10 +29,10 @@ import sendSMSError from "./sms/sendSMSError";
 import forceSendFile from "./forceSendFile";
 import sendSMSTextError from "./sms/sendSMSTextError";
 import sendServicesQuickReply from "./sendServicesQuickReply";
-import sendTypeLetterQuickReply from "./lettre/sendTypeLetterQuickReply"
-import sendTranslateQuickReply from './sendTranslateQuickReply' ;
-import sendAronaPlusQuickReply from './sendAronaPlusQuickReply';
-import sendGoogleQuickReply from './sendGoogleQuickReply'
+import sendTypeLetterQuickReply from "./lettre/sendTypeLetterQuickReply";
+import sendTranslateQuickReply from "./sendTranslateQuickReply";
+import sendAronaPlusQuickReply from "./sendAronaPlusQuickReply";
+import sendGoogleQuickReply from "./sendGoogleQuickReply";
 export {
   sendDivertissementMenuQuickReply,
   sendSMSSuccess,
@@ -65,9 +65,8 @@ export {
   sendApkSearchResult,
   forceSendFile,
   sendServicesQuickReply,
-  forceSendFile,
   sendTranslateQuickReply,
   sendAronaPlusQuickReply,
-  sendGoogleQuickReply
+  sendGoogleQuickReply,
   sendTypeLetterQuickReply
 };

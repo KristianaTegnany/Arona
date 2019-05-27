@@ -10,6 +10,7 @@ import {
   sendHomeMessageQuickReply,
   sendQuickReplyAfterApkSent,
   sendAronaPlusQuickReply,
+  sendTypeLetterQuickReply,
   sendServicesQuickReply,
   sendGoogleQuickReply
 } from "../senders";
@@ -106,7 +107,7 @@ export default function(event, userSession) {
             });
             break;
 
-          default:sendTypeLetterQuickReply
+          default:
             break;
         }
       }
@@ -123,7 +124,6 @@ function handlePostback(senderID, postback, userSession) {
   let new_obj = {};
   console.log(postback.payload);
   console.log("eto ");
-  
 
   switch (postback.payload) {
     case "show.divertissement_menu":
@@ -147,8 +147,13 @@ function handlePostback(senderID, postback, userSession) {
       setter(senderID, new_obj);
       //sendTextMessage(senderID, locales.ask_bus_arrival[lang]);
       console.log("tonga eto");
-      
-      sendServicesQuickReply(senderID, userSession, locales.ask_bus_arrival[lang], "bus")
+
+      sendServicesQuickReply(
+        senderID,
+        userSession,
+        locales.ask_bus_arrival[lang],
+        "bus"
+      );
       getter(senderID, function(obj) {
         obj["bus"] = {
           departure: "",
@@ -163,7 +168,11 @@ function handlePostback(senderID, postback, userSession) {
       new_obj.lang = userSession.lang;
       setter(senderID, new_obj);
       //sendServicesQuickReply(senderID, userSession, locales.ask_letter_type[lang], "letter_model")
-      sendTypeLetterQuickReply(senderID, userSession, locales.ask_letter_type[lang])
+      sendTypeLetterQuickReply(
+        senderID,
+        userSession,
+        locales.ask_letter_type[lang]
+      );
       getter(senderID, function(obj) {
         let new_obj = {};
         new_obj.lang = obj.lang;
@@ -171,12 +180,17 @@ function handlePostback(senderID, postback, userSession) {
         setter(senderID, new_obj);
         // client.set(senderID, JSON.stringify(obj))
       });
-      
+
       break;
     case "lyrics":
       new_obj.lang = userSession.lang;
       setter(senderID, new_obj);
-      sendAronaPlusQuickReply(senderID,userSession,locales.ask_lyric_title[lang],"lyrics")
+      sendAronaPlusQuickReply(
+        senderID,
+        userSession,
+        locales.ask_lyric_title[lang],
+        "lyrics"
+      );
       //sendTextMessage(senderID, locales.ask_lyric_title[lang]);
       getter(senderID, function(obj) {
         let new_obj = {};
@@ -188,7 +202,12 @@ function handlePostback(senderID, postback, userSession) {
       break;
     case "youtube":
       //sendTextMessage(senderID, locales.ask_youtube_search[lang]);
-      sendAronaPlusQuickReply(senderID,userSession,locales.ask_youtube_search[lang],"youtube")
+      sendAronaPlusQuickReply(
+        senderID,
+        userSession,
+        locales.ask_youtube_search[lang],
+        "youtube"
+      );
       getter(senderID, function(obj) {
         new_obj.lang = obj.lang;
         new_obj["youtube"] = true;
@@ -197,7 +216,12 @@ function handlePostback(senderID, postback, userSession) {
       });
       break;
     case "translate":
-      sendGoogleQuickReply(senderID,userSession,locales.ask_translate[lang],"translate")
+      sendGoogleQuickReply(
+        senderID,
+        userSession,
+        locales.ask_translate[lang],
+        "translate"
+      );
       //sendTextMessage(senderID, locales.ask_translate[lang]);
       getter(senderID, function(obj) {
         new_obj.lang = obj.lang;
@@ -207,7 +231,11 @@ function handlePostback(senderID, postback, userSession) {
       });
       break;
     case "google_search":
-      sendSearchTypeQuickReply(senderID, userSession,locales.ask_searchType[lang]);
+      sendSearchTypeQuickReply(
+        senderID,
+        userSession,
+        locales.ask_searchType[lang]
+      );
       getter(senderID, function(obj) {
         new_obj.lang = obj.lang;
         new_obj["google_search"] = true;
