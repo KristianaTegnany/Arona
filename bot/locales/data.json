@@ -1,0 +1,588 @@
+{
+    "restauration": {
+        "fr": "Restauration",
+        "en": "Catering",
+        "mg": "Fisakafoanana"
+    },
+    "restaurants": {
+        "fr": "Restaurants",
+        "en": "Restaurants",
+        "mg": "Restaurants"
+    },
+    "fast_food": {
+        "fr": "Fast food",
+        "en": "Fast food",
+        "mg": "Fast food"
+    },
+    "bar": {
+        "fr": "Bar",
+        "en": "Bar",
+        "mg": "Bar"
+    },
+    "hotel_spa": {
+        "fr": "Hotel & Spa",
+        "en": "Hotel & Spa",
+        "mg": "Hotel & Spa"
+    },
+    "hotels_et_motels": {
+        "fr": "Hotels et Motels",
+        "en": "Hotels and Motels",
+        "mg": "Hotels et Motels"
+    },
+    "chambre_d_hotes": {
+        "fr": "Chambre d'hotes",
+        "en": "Bed and Breakfast",
+        "mg": "Chambre d'hotes"
+    },
+    "maison_d_hotes": {
+        "fr": "Maison d'hotes",
+        "en": "Guest house",
+        "mg": "bar"
+    },
+    "auto_moto": {
+        "fr": "Auto-Moto",
+        "en": "Motoring",
+        "mg": "Auto-Moto"
+    },
+    "achat_auto_moto": {
+        "fr": "Achat auto-moto",
+        "en": "buy motorcycle",
+        "mg": "mividy auto na môtô"
+    },
+    "pieces_auto_moto": {
+        "fr": "Pieces auto-moto",
+        "en": "Auto-motorcycle parts",
+        "mg": "Pieces auto-moto"
+    },
+    "station_service_depanneurs_garage": {
+        "fr": "Station services , Depanneurs , Garage",
+        "en": "Station services , Depanneurs , Garage",
+        "mg": "Station services , Depanneurs , Garage"
+    },
+    "location": {
+        "fr": "Location",
+        "en": "Leasing",
+        "mg": "Location"
+    },
+    "immobilier": {
+        "fr": "Immobilier",
+        "en": "Property business",
+        "mg": "Immobilier"
+    },
+    "autres": {
+        "fr": "Autres",
+        "en": "Others",
+        "mg": "Hafa"
+    },
+    "loisirs": {
+        "fr": "Loisir",
+        "en": "Leisure",
+        "mg": "Fialam-boly"
+    },
+    "musique": {
+        "fr": "Musique",
+        "en": "Music",
+        "mg": "Mozika"
+    },
+    "evenement": {
+        "fr": "Evènement",
+        "en": "Event",
+        "mg": "Hetsika"
+    },
+    "spectacles": {
+        "fr": "Spectacles",
+        "en": "Shows",
+        "mg": "Spectacles"
+    },
+    "sante_et_bien_etre": {
+        "fr": "Santé et bien être",
+        "en": "Health and wellbeing",
+        "mg": "Santé et bien être"
+    },
+    "salon_de_beaute": {
+        "fr": "Salon de beauté",
+        "en": "Beauty salon",
+        "mg": "Salon de beauté"
+    },
+    "etablissements_medical": {
+        "fr": "Etablissements medical",
+        "en": "Etablissements medical",
+        "mg": "Etablissements medical"
+    },
+    "sport_spa": {
+        "fr": "Sport & Spa",
+        "en": "Sport & Spa",
+        "mg": "Sport & Spa"
+    },
+    "recommandation": {
+        "fr": "Recommandation",
+        "en": "Recommendation",
+        "mg": "Recommandation"
+    },
+    "cadeaux": {
+        "fr": "Cadeaux",
+        "en": "Gifts",
+        "mg": "Fanomezana"
+    },
+    "etablissements_financieres": {
+        "fr": "Etablissements financières",
+        "en": "Financial institutions",
+        "mg": "Etablissements financières"
+    },
+    "banques": {
+        "fr": "Banques",
+        "en": "Banky",
+        "mg": "Banks"
+    },
+    "transfert_d_argent": {
+        "fr": "Transfert d'argents",
+        "en": "Money transfer",
+        "mg": "Fandefasana vola"
+    },
+    "autres_etablissements": {
+        "fr": "Autres etablissements",
+        "en": "Other institutions",
+        "mg": "fikambanana hafa"
+    },
+    "arona_plus": {
+        "fr": "Arona +",
+        "en": "Arona +",
+        "mg": "Arona +"
+    },
+    "bus": {
+        "fr": "Bus",
+        "en": "Bus",
+        "mg": "Bus"
+    },
+    "divertissement": {
+        "fr": "Divertissement",
+        "en": "Entertainment",
+        "mg": "Fialam-boly"
+    },
+    "services": {
+        "fr": "Services",
+        "en": "Services",
+        "mg": "Tolotra"
+    },
+    "urgence": {
+        "fr": "Urgence",
+        "en": "Emergency",
+        "mg": "Vonjy taitra"
+    },
+    "arona_services": {
+        "fr": "Arona services",
+        "en": "Arona services",
+        "mg": "Arona services"
+    },
+    "send_sms": {
+        "fr": "Envoyer un SMS",
+        "en": "Send a text message",
+        "mg": "bar"
+    },
+    "chercher_sur_google": {
+        "fr": "Chercher sur google",
+        "en": "Search on google",
+        "mg": "Fikarohana amin'ny google"
+    },
+    "arona_divertissement": {
+        "fr": "Arona Divertissement",
+        "en": "Arona Divertissement",
+        "mg": "Arona Divertissement"
+    },
+    "lyrics": {
+        "fr": "Paroles",
+        "en": "Lyrics",
+        "mg": "Tononkira"
+    },
+    "akinator": {
+        "fr": "Akinator",
+        "en": "Akinator",
+        "mg": "Akinator"
+    },
+    "letter_model": {
+        "fr": "Modèle de Lettres",
+        "en": "Letter Template",
+        "mg": "Letter Template"
+    },
+    "video_musique": {
+        "fr": "Videos & Musiques",
+        "en": "Videos & Musics",
+        "mg": "Videos & Mozika"
+    },
+    "ask_bus_arrival": {
+        "fr": "Dites-moi votre destination",
+        "en": "Tell me your destination",
+        "mg": "Lazao ahy ny toeranao aleha"
+    },
+    "ask_bus_departure": {
+        "fr": "Dites-moi votre arrêt de départ",
+        "en": "Main Menu",
+        "mg": "Menu Principale"
+    },
+    "ask_lyric_title": {
+        "fr": "Dites-moi le titre de la chanson",
+        "en": "Tell me your departure stop",
+        "mg": "Dites-moi le titre de la chanson"
+    },
+    "choose": {
+        "fr": "Choisir",
+        "en": "Choose",
+        "mg": "Choisir"
+    },
+    "choose_divertissement_menu_or_search_another": {
+        "fr": "Cliquez sur ce bouton pour retourner ou tapez un mot-clé pour rechercher une autre chanson.",
+        "en": "Click this button to return or type a keyword to search for another song",
+        "mg": "Tsindrio ity bokotra ity mba hiverina na hanonona teny fanalahidy iray hitadiavana hira hafa"
+    },
+    "back": {
+        "fr": "Retour",
+        "en": "Back",
+        "mg": "Miverina"
+
+    },
+    "no_song_results": {
+        "fr": "Aucune chanson a été trouvé avec ce mot-clé. Réessayer une autre mot-clé ou retourner au menu précedent",
+        "en": "No songs were found with this keyword. Retry another keyword or return to the previous menu",
+        "mg": "Aucune chanson a été trouvé avec ce mot-clé. Réessayer une autre mot-clé ou retourner au menu précedent"
+    },
+    "main_menu": {
+        "fr": "Menu Principale",
+        "en": "Main Menu",
+        "mg": "Menu Principale"
+    },
+    "bus_response": {
+        "fr": "vous prenez le bus {} à l'arrêt {} et descendez à {}.",
+        "en": "you take the {} bus on the {} stop and get off at {}.",
+        "mg": "maka ny bus {} eo amin'ny \"arrêt\" {} ary mialà any {}."
+    },
+    "bus_after": {
+        "fr": " Après, ",
+        "en": " After, ",
+        "mg": " Aorian'io, "
+    },
+    "data_bus_error": {
+        "fr": "Il y a une erreur sur les données du bus",
+        "en": "There is an error on the bus data",
+        "mg": "Misy tsy mety amin'ny \"données\" ananana amin'ny bus"
+    },
+    "back_to_main_menu_after_bus": {
+        "fr": "Dites-moi votre nouvelle destination ou cliquer sur le bouton ci-dessous pour revenir au menu principale",
+        "en": "Tell me your new destination or click on the button below to return to the main menu",
+        "mg": "Dis-moi ta nouvelle destination ou cliquer sur le bouton ci-dessous pour revenir au menu principale"
+    },
+    "ask_youtube_search": {
+        "fr": "Entrez un mot clé pour votre recherche sur Youtube",
+        "en": "Enter a keyword for your search on Youtube",
+        "mg": "Entrez un mot clé pour votre recherche sur Youtube"
+    },
+    "back_to_main_menu_after_youtube": {
+        "fr": "Entrez un mot clé pour une nouvelle recherche sur Youtube ou cliquer sur le bouton ci-dessous pour revenir au menu principale",
+        "en": "Enter a keyword for a new search on Youtube or click on the button below to return to the main menu",
+        "mg": "Entrez un mot clé pour une nouvelle recherche sur Youtube ou cliquer sur le bouton ci-dessous pour revenir au menu principale"
+    },
+    "file_send_error": {
+        "fr": "Error lors de l'envoi du fichier",
+        "en": "Error sending file",
+        "mg": "Error lors de l'envoi du fichier"
+    },
+    "please_wait": {
+        "fr": "Veuillez Patientez...",
+        "en": "Please wait...",
+        "mg": "Veuillez Patientez..."
+
+    },
+    "google": {
+        "fr": "Google",
+        "en": "Google",
+        "mg": "Google"
+    },
+    "translate": {
+        "fr": "Traduction",
+        "en": "Translate",
+        "mg": "Traduction"
+    },
+    "download_apk": {
+        "fr": "Télécharger un APK",
+        "en": "Download APK",
+        "mg": "Télécharger un APK"
+    },
+    "google_search": {
+        "fr": "Recherche",
+        "en": "Search",
+        "mg": "Recherche"
+    },
+    "ask_translate": {
+        "fr": "Entrez votre phrase à traduire\n\"help\" pour l'aide ou \"tags\" pour la liste des tags",
+        "en": "Enter your phrase to translate \n \"help\" for help or \"tags\" for the tag list",
+        "mg": "Entrez votre phrase à traduire\n\"help\" pour l'aide ou \"tags\" pour la liste des tags"
+    },
+    "help_translate": {
+        "fr": "1. Traduction d'une langue spécifique vers une autre langue spécifique\n\nExemple:\nen de fr: bonjour\n=> Bonjour\n\n2. Traduction d'une langue indéterminée vers une langue spécifique\nExemple:\nto mg: thanks\n=> Misaotra\n\n3. Corriger ou paraphraser un texte\nExemple:\nBonjour a tous\n=> Bonjour à tous",
+        "en": "1. Translation from one specific language to another specific language\n\nExample:\nen to fr : hello\n=> Bonjour\n\n2. Translation from an indeterminate language to a specific language\nexample:\nto mg : thanks\n=> Misaotra\n\n3. Correct or paraphrase a text\nexample:\nBonjour a tous\n=> Bonjour à tous",
+        "mg": "1. Traduction d'une langue spécifique vers une autre langue spécifique\n\nExemple:\nen de fr: bonjour\n=> Bonjour\n\n2. traduction d'une langue indéterminée vers une langue spécifique\nExemple:\nto mg: thanks\n=> Misaotra\n\n3. Corriger ou paraphraser un texte\nExemple:\nBonjour a tous\n=> Bonjour à tous"
+    },
+    "tags_translate": {
+        "fr": "Arabic=ar\nChinese (Simplified)=zh-CN\nChinese (Traditional)=zh-TW\nEnglish=en\nFrench=fr\nGerman=de\nHebrew=he**\nHindi=hi\nIndonesian=id\nItalian=it\nJapanese=ja\nKorean=ko\nLatin=la\nMalagasy=mg\nPortuguese (Portugal, Brazil)=pt\nRomanian=ro\nRussian=ru\nSpanish=es\nSwedish=sv",
+        "en": "Arabic=ar\nChinese (Simplified)=zh-CN\nChinese (Traditional)=zh-TW\nEnglish=en\nFrench=fr\nGerman=de\nHebrew=he**\nHindi=hi\nIndonesian=id\nItalian=it\nJapanese=ja\nKorean=ko\nLatin=la\nMalagasy=mg\nPortuguese (Portugal, Brazil)=pt\nRomanian=ro\nRussian=ru\nSpanish=es\nSwedish=sv",
+        "mg": "Arabic=ar\nChinese (Simplified)=zh-CN\nChinese (Traditional)=zh-TW\nEnglish=en\nFrench=fr\nGerman=de\nHebrew=he**\nHindi=hi\nIndonesian=id\nItalian=it\nJapanese=ja\nKorean=ko\nLatin=la\nMalagasy=mg\nPortuguese (Portugal, Brazil)=pt\nRomanian=ro\nRussian=ru\nSpanish=es\nSwedish=sv"
+    },
+    "ask_searchType": {
+        "fr": "Choisissez le type de contenu à rechercher",
+        "en": "choose the type of content to search for",
+        "mg": "Mifidiana karazana votoaty tadiavina"
+
+    },
+    "ask_web_google_search_keyword": {
+        "fr": "Entrez le mot clé (ou un URL) pour une recherche sur le web",
+        "en": "Enter the keyword (or URL) for a web search",
+        "mg": "Ampidiro ny teny fototra amin'ny fikarohana ao amin'ny tranonkala"
+
+    },
+    "ask_image_google_search_keyword": {
+        "fr": "Entrez le mot clé pour une recherche d'image",
+        "en": "Enter the keyword for an image searchr",
+        "mg": "Ampidiro ny teny fanalahidy ho an'ny fikarohana sary"
+
+    },
+    "no_images_results": {
+        "fr": "Aucune image correspondante",
+        "en": "No matching images",
+        "mg": "Tsy misy sary mifanaraka amin'izany"
+    },
+    "retry": {
+        "fr": "Réessayer !",
+        "en": "Retry !",
+        "mg": "Avereno indray mandeha !"
+    },
+    "page_unscreenshootable": {
+        "fr": "Impossible de prendre une capture d'écran de la page",
+        "en": "Can not take a screenshot of the page",
+        "mg": "Impossible de prendre une capture d'écran de la page"
+    },
+    "abusiveContent": {
+        "fr": "Contenu abusif ou non autorisé",
+        "en": "Abusive or unauthorized content",
+        "mg": "Contenu abusif ou non autorisé"
+    },
+    "youtube_search_error": {
+        "fr": "Contenu abusif ou non autorisé",
+        "en": "Abusive or unauthorized content",
+        "mg": "Contenu abusif ou non autorisé"
+
+    },
+    "page_unscrappable": {
+        "fr": "La page ne peut pas être téléchargée",
+        "en": "The page can not be downloaded",
+        "mg": "La page ne peut pas être téléchargée"
+    },
+    "page_unzipable": {
+        "fr": "La page ne peut pas être archivée",
+        "en": "The page can not be archived",
+        "mg": "La page ne peut pas être archivée"
+    },
+    "view_online": {
+        "fr": "Voir en ligne",
+        "en": "See online",
+        "mg": "Voir en ligne"
+    },
+    "page_download": {
+        "fr": "Télécharger",
+        "en": "Download",
+        "mg": "Télécharger"
+    },
+    "page_screenshoot": {
+        "fr": "Capturer",
+        "en": "Screenshoot",
+        "mg": "Capture"
+    },
+    "choose_web_url_search_type": {
+        "fr": "Quel type de recherche voulez-vous appliquer sur cette URL?",
+        "en": "What type of search do you want to apply on this url?",
+        "mg": "Quel type de recherche voulez-vous appliquer sur cette URL?"
+    },
+    "yes": {
+        "fr": "Oui",
+        "en": "Yes",
+        "mg": "Eny"
+    },
+    "no": {
+        "fr": "Non",
+        "en": "No",
+        "mg": "Tsia"
+    },
+    "idk": {
+        "fr": "Je ne sais pas",
+        "en": "I don't know",
+        "mg": "Tsy fantatro"
+    },
+    "probably": {
+        "fr": "Probablement",
+        "en": "Probably",
+        "mg": "Angamba"
+    },
+    "probably_not": {
+        "fr": "Probablement pas",
+        "en": "Probably not",
+        "mg": "Tsia angamba"
+    },
+    "akinator_start": {
+        "fr": "Pensez à un personnage réel ou fictif. Je vais essayer de deviner qui c'est",
+        "en": "Think about a real or fictional character. I will try to guess who it is",
+        "mg": "Pensez à un personnage réel ou fictif. Je vais essayer de deviner qui c'est"
+    },
+    "your_personage_is": {
+        "fr": "Votre personnage est",
+        "en": "Your character is",
+        "mg": "Votre personnage est"
+    },
+    "restart": {
+        "fr": "Recommencer",
+        "en": "Restart",
+        "mg": "Recommencer"
+
+    },
+    "exit": {
+        "fr": "Quitter",
+        "en": "Exit",
+        "mg": "Quitter"
+
+    },
+    "ask_apk_keyword": {
+        "fr": "Entrez un mot clé pour la recherche d'applications Android",
+        "en": "Enter a keyword for Android app search",
+        "mg": "Entrez un mot clé pour la recherche d'applications Android"
+    },
+    "apk_suggs": {
+        "fr": "L’application correspondant au mot clé \"{}\" est le package {}",
+        "en": "The application corresponding to the \"{}\" keyword is the {} package",
+        "mg": "L’application correspondant au mot clé \"{}\" est le package {}"
+    },
+    "apk_match": {
+        "fr": "Le package {} existe",
+        "en": "The {} package exists",
+        "mg": "Le package {} existe"
+    },
+    "download": {
+        "fr": "Télécharger",
+        "en": "Download",
+        "mg": "Télécharger"
+    },
+    "apk_size": {
+        "fr": "Taille de l'application",
+        "en": "Size of the application",
+        "mg": "Size of the application"
+
+    },
+    "parts": {
+        "fr": "Segmenté en {} parties",
+        "en": "Segmented into {} parts",
+        "mg": "Segmented into {} parts"
+    },
+    "apk_sent": {
+        "fr": "Fusionner les fichiers avec les programmes correspondant à votre système",
+        "en": "Merge files with programs that match your system",
+        "mg": "Fusionner les fichiers avec les programmes correspondant à votre système"
+    },
+    "apk_infos": {
+        "fr": "Informations",
+        "en": "Informations",
+        "mg": "Informations"
+    },
+    "title": {
+        "fr": "Titre",
+        "en": "Title",
+        "mg": "Titre"
+
+    },
+    "description": {
+        "fr": "Description",
+        "en": "Description",
+        "mg": "Description"
+
+    },
+    "size": {
+        "fr": "Taille",
+        "en": "Size",
+        "mg": "Taille"
+
+    },
+    "genre": {
+        "fr": "Genre",
+        "en": "Genre",
+        "mg": "Genre"
+
+    },
+    "score": {
+        "fr": "Score",
+        "en": "Score",
+        "mg": "Score"
+
+    },
+    "version": {
+        "fr": "Version",
+        "en": "Version",
+        "mg": "Version"
+
+    },
+    "summary": {
+        "fr": "Résumé",
+        "en": "Summary",
+        "mg": "Résumé"
+
+    },
+    "apk_screenshots": {
+        "fr": "Capture d'écran",
+        "en": "Screenshot",
+        "mg": "Screenshot"
+
+    },
+    "next": {
+        "fr": "Suivant",
+        "en": "Next",
+        "mg": "Next"
+
+    },
+    "shazaam": {
+        "fr": "Shazaam",
+        "en": "Shazaam",
+        "mg": "Shazaam"
+    },
+    "number_sms_error": {
+        "fr": "Numéro de destination invalide. Réessayez",
+        "en": "Invalid destination number. Retry",
+        "mg": "Invalid destination number. Retry"
+
+    },
+    "ask_number_sms": {
+        "fr": "Entrez le numéro de destination",
+        "en": "Enter the destination number",
+        "mg": "Enter the destination number"
+
+    },
+    "ask_text_sms": {
+        "fr": "Entrez votre message",
+        "en": "Enter your message",
+        "mg": "Entrez votre message"
+
+    },
+    "invalid_number_sms": {
+        "fr": "Votre numéro est invalide",
+        "en": "Your number is invalid",
+        "mg": "Your number is invalid"
+    },
+    "sms_sent_success": {
+        "fr": "Message envoyé",
+        "en": "Message sent",
+        "mg": "Message envoyér"
+    },
+    "sms_sent_error": {
+        "fr": "Message non envoyé",
+        "en": "Message not sent",
+        "mg": "Message non envoyé"
+    },
+    "sms_text_error": {
+        "fr": "La longueur du message est trop longue (max: 160 caractères). Réessayez",
+        "en": "The length of the message is too long (Max: 160 characters). Retry",
+        "mg": "La longueur du message est trop longue (max: 160 caractères). Réessayez"
+    }
+}

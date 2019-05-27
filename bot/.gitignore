@@ -1,0 +1,19 @@
+node_modules
+
+# Config vars
+.env
+
+# Temp files
+temp
+/temp/**
+
+# Drafts files
+drafts
+/drafts/**
+
+# Build Files
+lib
+/lib/**
+
+# package lock
+package-lock.json
