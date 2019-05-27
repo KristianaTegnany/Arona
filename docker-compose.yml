@@ -1,0 +1,20 @@
+version: "3"
+services:
+  bot:
+    build:
+      context: bot
+      dockerfile: dev.Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./bot/src:/app/src
+  ngrok:
+    build:
+      context: ngrok-server
+      dockerfile: Dockerfile
+    environment:
+      authtoken: 3NmgMiQTtyKgndgsv4jpH_3RdkiJzH5DpiBbZFd8qSY
+      ports: 8000
+      webhookUrl: https://developers.facebook.com/apps/336380870334023/webhooks/
+    volumes:
+      - ./ngrok-server/:/app/
