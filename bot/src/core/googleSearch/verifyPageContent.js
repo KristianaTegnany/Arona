@@ -4,7 +4,8 @@ import path from 'path'
 import {
     sendTextMessage,
     sendMainMenuQuickReply,
-    sendImageFile
+    sendImageFile,
+    sendGoogleQuickReply
 } from '../../senders';
 import locales from '../../../locales/data'
 import {
@@ -40,7 +41,7 @@ function urltoImageModeration(senderID, userSession, payload, cb) {
         if (err) {
             console.log(err)
             console.log("url to image error")
-            sendMainMenuQuickReply(senderID, userSession, locales.page_unscreenshootable[userSession.lang])
+            sendGoogleQuickReply(senderID, userSession, locales.page_unscreenshootable[userSession.lang],"google_search")
         } else {
             let img_url = `${process.env.currentUrl}/screenshoots/${fileName}`
             console.log(img_url);
@@ -53,7 +54,7 @@ function urltoImageModeration(senderID, userSession, payload, cb) {
                     let image_safe = json.predictions.everyone
                     if (image_safe >= SAFE) {
                         sendImageFile(senderID, img_url, function () {
-                            sendMainMenuQuickReply(senderID, userSession, `${title}\n\n${locales.view_online[userSession.lang]} : ${url}`, function () {
+                            sendGoogleQuickReply(senderID, userSession, `${title}\n\n${locales.view_online[userSession.lang]} : ${url}`,"google_search", function () {
                                 unlink(file, function () {
                                     //    sendMainMenuQuickReply(senderID,userSession, locales.ask_web_google_search_keyword[userSession.lang])
                                 })
@@ -62,7 +63,7 @@ function urltoImageModeration(senderID, userSession, payload, cb) {
                         //On peut envoyer l'images ici  
                     } else {
                         console.log("UNSAFE IMAGE")
-                        sendMainMenuQuickReply(senderID, userSession, `${title}\n\n${locales.abusiveContent[userSession.lang]} : ${url}`, function () {
+                        sendGoogleQuickReply(senderID, userSession, `${title}\n\n${locales.abusiveContent[userSession.lang]} : ${url}`,"google_search", function () {
                             unlink(file, function () {
                                 //    sendMainMenuQuickReply(senderID,userSession, locales.ask_web_google_search_keyword[userSession.lang])
                             })
@@ -70,7 +71,7 @@ function urltoImageModeration(senderID, userSession, payload, cb) {
                     }
                 } else {
                     console.log("json error")
-                    sendMainMenuQuickReply(senderID, userSession, locales.abusiveContent[userSession.lang], function () {
+                    sendGoogleQuickReply(senderID, userSession, locales.abusiveContent[userSession.lang],"google_search", function () {
                         unlink(file, function () {
                             //    sendMainMenuQuickReply(senderID,userSession, locales.ask_web_google_search_keyword[userSession.lang])
                         })

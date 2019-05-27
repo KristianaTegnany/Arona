@@ -9,8 +9,9 @@ import {
   sendPageScreenshoot,
   sendHomeMessageQuickReply,
   sendQuickReplyAfterApkSent,
+  sendAronaPlusQuickReply,
   sendServicesQuickReply,
-  sendTypeLetterQuickReply
+  sendGoogleQuickReply
 } from "../senders";
 import { getter, setter } from "../sessions";
 import client from "../sessions/redisClient";
@@ -175,7 +176,8 @@ function handlePostback(senderID, postback, userSession) {
     case "lyrics":
       new_obj.lang = userSession.lang;
       setter(senderID, new_obj);
-      sendTextMessage(senderID, locales.ask_lyric_title[lang]);
+      sendAronaPlusQuickReply(senderID,userSession,locales.ask_lyric_title[lang],"lyrics")
+      //sendTextMessage(senderID, locales.ask_lyric_title[lang]);
       getter(senderID, function(obj) {
         let new_obj = {};
         new_obj.lang = obj.lang;
@@ -185,7 +187,8 @@ function handlePostback(senderID, postback, userSession) {
       });
       break;
     case "youtube":
-      sendTextMessage(senderID, locales.ask_youtube_search[lang]);
+      //sendTextMessage(senderID, locales.ask_youtube_search[lang]);
+      sendAronaPlusQuickReply(senderID,userSession,locales.ask_youtube_search[lang],"youtube")
       getter(senderID, function(obj) {
         new_obj.lang = obj.lang;
         new_obj["youtube"] = true;
@@ -194,7 +197,8 @@ function handlePostback(senderID, postback, userSession) {
       });
       break;
     case "translate":
-      sendTextMessage(senderID, locales.ask_translate[lang]);
+      sendGoogleQuickReply(senderID,userSession,locales.ask_translate[lang],"translate")
+      //sendTextMessage(senderID, locales.ask_translate[lang]);
       getter(senderID, function(obj) {
         new_obj.lang = obj.lang;
         new_obj["translate"] = true;
@@ -203,7 +207,7 @@ function handlePostback(senderID, postback, userSession) {
       });
       break;
     case "google_search":
-      sendSearchTypeQuickReply(senderID, locales.ask_searchType[lang]);
+      sendSearchTypeQuickReply(senderID, userSession,locales.ask_searchType[lang]);
       getter(senderID, function(obj) {
         new_obj.lang = obj.lang;
         new_obj["google_search"] = true;

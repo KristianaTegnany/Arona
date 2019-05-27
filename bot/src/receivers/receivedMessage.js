@@ -2,7 +2,9 @@ import {
   sendTextMessage,
   sendMainMenuQuickReply,
   sendWebUrlSearchTypeQuickReply,
-  sendSearchTypeQuickReply
+  sendSearchTypeQuickReply,
+  sendTranslateQuickReply,
+  sendGoogleQuickReply
 } from "../senders";
 import sendMainMenu from "../senders/sendMainMenu";
 import { getter, setter, eraser } from "../sessions";
@@ -14,9 +16,9 @@ import searchImage from "../core/googleSearch/image";
 import searchWeb from "../core/googleSearch/web";
 import search_apk from "../core/apk/search_apk";
 import { search } from "../core/youtube";
-import processTranslate from "../core/translate/process";
 import numberValidation from "../core/sms/numberValidation";
 import textValidation from "../core/sms/textValidation";
+
 export default function(event, userSession) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
@@ -87,11 +89,11 @@ export default function(event, userSession) {
           } else {
             searchWeb(senderID, userSession, messageText, function(err, res) {
               if (err) {
-                sendMainMenuQuickReply(
+                sendGoogleQuickReply(
                   senderID,
                   userSession,
                   locales.abusiveContent[userSession.lang]
-                );
+                ,"google_search");
               }
             });
           }
@@ -111,7 +113,7 @@ export default function(event, userSession) {
     } else if (userSession.translate) {
       userSession.translate = messageText;
       setter(senderID, userSession);
-      processTranslate(senderID, userSession);
+      sendTranslateQuickReply(senderID,userSession,locales.ask_translate_lang[userSession.lang])
     } else if (userSession.download_apk) {
       search_apk(senderID, userSession, messageText, function() {});
     } else {

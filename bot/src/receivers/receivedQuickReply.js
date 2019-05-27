@@ -7,7 +7,9 @@ import {
   sendFinishAkinatorQuickReply,
   forceSendFile,
   sendServicesQuickReply,
-  sendAskNumberSMS
+  sendSearchTypeQuickReply,
+  sendGoogleQuickReply,
+  sendHomeMessageQuickReply
 } from "../senders";
 import { getter, setter } from "../sessions";
 import redisClient from "../sessions/redisClient";
@@ -16,6 +18,7 @@ import locales from "../../locales/data";
 import verifyPageContent from "../core/googleSearch/verifyPageContent";
 import scrapWebPage from "../core/googleSearch/scrapWebPage";
 import download_apk from "../core/apk/download_apk";
+import processTranslate from "../core/translate/process";
 import { runGame, startGame } from "../core/akinator/akinator-module";
 import { search } from "../core/youtube";
 import sendTypeLetterQuickReply from "../senders/sendServicesQuickReply"
@@ -70,7 +73,8 @@ export default function(event, userSession) {
     } catch (error) {
       handleQuickReply(senderID, userSession, message);
     }
-  } else {
+  } 
+  else {
     handleQuickReply(senderID, userSession, message);
   }
 }
@@ -131,7 +135,7 @@ function handleQuickReply(senderID, userSession, message) {
       });
       break;
     case "google_search.web":
-      sendTextMessage(senderID, locales.ask_web_google_search_keyword[lang]);
+      sendGoogleQuickReply(senderID, userSession,locales.ask_web_google_search_keyword[lang],"google_search");
       getter(senderID, function(obj) {
         new_obj = {
           lang: obj.lang
@@ -142,7 +146,7 @@ function handleQuickReply(senderID, userSession, message) {
       });
       break;
     case "google_search.image":
-      sendTextMessage(senderID, locales.ask_image_google_search_keyword[lang]);
+      sendGoogleQuickReply(senderID, userSession,locales.ask_image_google_search_keyword[lang],"google_search");
       getter(senderID, function(obj) {
         new_obj = {
           lang: obj.lang
@@ -227,6 +231,52 @@ function handleQuickReply(senderID, userSession, message) {
       break;
 
 
+    //Modifications
+    case 'translate.fr':
+        processTranslate(senderID, userSession,"fr");
+        break ;
+    case 'translate.en':
+        processTranslate(senderID, userSession,"en");
+        break ;
+    case 'translate.mg':
+        processTranslate(senderID, userSession,"mg");
+        break ;
+
+    case "translate":
+        sendGoogleQuickReply(senderID,userSession,locales.ask_translate[lang],"translate")
+        //sendTextMessage(senderID, locales.ask_translate[lang]);
+        getter(senderID, function(obj) {
+          new_obj.lang = obj.lang;
+          new_obj["translate"] = true;
+          setter(senderID, new_obj);
+          // client.set(senderID, JSON.stringify(obj))
+        });
+        break ;
+    case "google_search":
+        sendSearchTypeQuickReply(senderID, locales.ask_searchType[lang]);
+        getter(senderID, function(obj) {
+          new_obj.lang = obj.lang;
+          new_obj["google_search"] = true;
+          setter(senderID, new_obj);
+          // client.set(senderID, JSON.stringify(obj))
+        });
+        break ;
+    case "download_apk":
+        getter(senderID, function(obj) {
+          new_obj.lang = obj.lang;
+          new_obj["download_apk"] = true;
+          setter(senderID, new_obj);
+        });
+  
+        sendHomeMessageQuickReply(
+          senderID,
+          userSession,
+          locales.ask_apk_keyword[userSession.lang],
+          function() {}
+        );
+        break ;
+
+    
     default:
       if (userSession.download_apk) {
         let apk_folder = `./temp/Apk/`;

@@ -245,9 +245,9 @@
         "mg": "Choisir"
     },
     "choose_divertissement_menu_or_search_another": {
-        "fr": "Cliquez sur ce bouton pour retourner ou tapez un mot-clé pour rechercher une autre chanson.",
-        "en": "Click this button to return or type a keyword to search for another song",
-        "mg": "Tsindrio ity bokotra ity mba hiverina na hanonona teny fanalahidy iray hitadiavana hira hafa"
+        "fr": "Tapez un mot-clé pour rechercher une autre chanson.",
+        "en": "Type a keyword to search for another song",
+        "mg": "Mampidira teny hafa hitadiavana hira vaovao"
     },
     "back": {
         "fr": "Retour",
@@ -316,6 +316,11 @@
         "en": "Translate",
         "mg": "Traduction"
     },
+    "ask_translate_lang": {
+        "fr": "Choisissez la langue pour traduire ce texte",
+        "en": "Choose the language to translate this text",
+        "mg": "Misafidiana ny fiteny handikana ity lahatsoratra ity"
+    },
     "download_apk": {
         "fr": "Télécharger un APK",
         "en": "Download APK",
@@ -327,9 +332,9 @@
         "mg": "Recherche"
     },
     "ask_translate": {
-        "fr": "Entrez votre phrase à traduire\n\"help\" pour l'aide ou \"tags\" pour la liste des tags",
-        "en": "Enter your phrase to translate \n \"help\" for help or \"tags\" for the tag list",
-        "mg": "Entrez votre phrase à traduire\n\"help\" pour l'aide ou \"tags\" pour la liste des tags"
+        "fr": "Entrez votre phrase à traduire",
+        "en": "Enter your phrase to translate ",
+        "mg": "Ampidiro ny teny ho hadika "
     },
     "help_translate": {
         "fr": "1. Traduction d'une langue spécifique vers une autre langue spécifique\n\nExemple:\nen de fr: bonjour\n=> Bonjour\n\n2. Traduction d'une langue indéterminée vers une langue spécifique\nExemple:\nto mg: thanks\n=> Misaotra\n\n3. Corriger ou paraphraser un texte\nExemple:\nBonjour a tous\n=> Bonjour à tous",
