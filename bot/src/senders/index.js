@@ -28,6 +28,8 @@ import sendSMSSuccess from "./sms/sendSMSSuccess";
 import sendSMSError from "./sms/sendSMSError";
 import forceSendFile from "./forceSendFile";
 import sendSMSTextError from "./sms/sendSMSTextError";
+import sendServicesQuickReply from "./sendServicesQuickReply";
+import sendTypeLetterQuickReply from "./lettre/sendTypeLetterQuickReply"
 export {
   sendDivertissementMenuQuickReply,
   sendSMSSuccess,
@@ -58,5 +60,8 @@ export {
   sendQuickReplyAfterApkSent,
   sendHomeMessageQuickReply,
   sendApkSearchResult,
-  forceSendFile
+  forceSendFile,
+  sendServicesQuickReply,
+  sendTypeLetterQuickReply
+
 };

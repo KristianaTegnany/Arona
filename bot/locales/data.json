@@ -219,6 +219,21 @@
         "en": "Main Menu",
         "mg": "Menu Principale"
     },
+    "ask_letter_type": {
+        "fr": "Quel type de lettre voulez-vous",
+        "en": "What kind of letter do you want",
+        "mg": "What kind of letter do you want"
+    },
+    "letter_cv": {
+        "fr" : "CV",
+        "en" : "CV",
+        "mg" : "CV"
+    },
+    "letter_lm": {
+        "fr" : "Lettre de Motivation",
+        "en": "Motivation Letter",
+        "mg": "Motivation Letter"
+    },
     "ask_lyric_title": {
         "fr": "Dites-moi le titre de la chanson",
         "en": "Tell me your departure stop",
@@ -266,9 +281,9 @@
         "mg": "Misy tsy mety amin'ny \"données\" ananana amin'ny bus"
     },
     "back_to_main_menu_after_bus": {
-        "fr": "Dites-moi votre nouvelle destination ou cliquer sur le bouton ci-dessous pour revenir au menu principale",
-        "en": "Tell me your new destination or click on the button below to return to the main menu",
-        "mg": "Dis-moi ta nouvelle destination ou cliquer sur le bouton ci-dessous pour revenir au menu principale"
+        "fr": "Dites-moi votre nouvelle destination ou choisissez l' une des options suivantes ",
+        "en": "Tell me your new destination or choose one of the following options",
+        "mg": "Dites-moi votre nouvelle destination ou choisissez l' une des options suivantes"
     },
     "ask_youtube_search": {
         "fr": "Entrez un mot clé pour votre recherche sur Youtube",

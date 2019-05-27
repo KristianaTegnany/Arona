@@ -14,6 +14,7 @@ import {
     setter
 } from '../../sessions'
 import sendMainMenuQuickReply from '../../senders/sendMainMenuQuickReply';
+import sendServicesQuickReply from '../../senders/sendServicesQuickReply';
 export default function (senderID, userSession, departure, arrival) {
 
     // console.log(departure, arrival);
@@ -49,13 +50,15 @@ export default function (senderID, userSession, departure, arrival) {
 
         if (bestWay.length - 1 != whatIsTheBus.length) {
             sendTextMessage(senderID, locales.data_bus_error[userSession.lang], function () {
-                sendMainMenuQuickReply(senderID,userSession, locales.back_to_main_menu_after_bus[userSession.lang])
+                //sendMainMenuQuickReply(senderID,userSession, locales.back_to_main_menu_after_bus[userSession.lang])
+                sendServicesQuickReply(senderID,userSession, locales.back_to_main_menu_after_bus[userSession.lang], "bus")
 
             })
         } else {
             let StringResponse = buildStringResponse(bestWay, whatIsTheBus, userSession)
             sendTextMessage(senderID, StringResponse, function () {
-                sendMainMenuQuickReply(senderID,userSession, locales.back_to_main_menu_after_bus[userSession.lang])
+                //sendMainMenuQuickReply(senderID,userSession, locales.back_to_main_menu_after_bus[userSession.lang])
+                sendServicesQuickReply(senderID,userSession, locales.back_to_main_menu_after_bus[userSession.lang], "bus")
 
             })
         }
@@ -68,7 +71,8 @@ export default function (senderID, userSession, departure, arrival) {
 
     } else {
         sendTextMessage(senderID, locales.data_bus_error[userSession.lang], function () {
-            sendMainMenuQuickReply(senderID,userSession, locales.back_to_main_menu_after_bus[userSession.lang])
+            //sendMainMenuQuickReply(senderID,userSession, locales.back_to_main_menu_after_bus[userSession.lang])
+            sendServicesQuickReply(senderID,userSession, locales.back_to_main_menu_after_bus[userSession.lang], "bus")
 
         })
     }
