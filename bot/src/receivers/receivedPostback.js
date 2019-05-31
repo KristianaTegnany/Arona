@@ -8,7 +8,9 @@ import {
   sendMainMenuQuickReply,
   sendPageScreenshoot,
   sendHomeMessageQuickReply,
-  sendQuickReplyAfterApkSent
+  sendQuickReplyAfterApkSent,
+  sendServicesQuickReply,
+  sendTypeLetterQuickReply
 } from "../senders";
 import { getter, setter } from "../sessions";
 import client from "../sessions/redisClient";
@@ -103,7 +105,7 @@ export default function(event, userSession) {
             });
             break;
 
-          default:
+          default:sendTypeLetterQuickReply
             break;
         }
       }
@@ -119,6 +121,8 @@ function handlePostback(senderID, postback, userSession) {
   let lang = userSession.lang;
   let new_obj = {};
   console.log(postback.payload);
+  console.log("eto ");
+  
 
   switch (postback.payload) {
     case "show.divertissement_menu":
@@ -137,10 +141,13 @@ function handlePostback(senderID, postback, userSession) {
       setter(senderID, new_obj);
       sendMainMenu(senderID, userSession);
       break;
-    case "start_bus":
+    case "bus":
       new_obj.lang = userSession.lang;
       setter(senderID, new_obj);
-      sendTextMessage(senderID, locales.ask_bus_arrival[lang]);
+      //sendTextMessage(senderID, locales.ask_bus_arrival[lang]);
+      console.log("tonga eto");
+      
+      sendServicesQuickReply(senderID, userSession, locales.ask_bus_arrival[lang], "bus")
       getter(senderID, function(obj) {
         obj["bus"] = {
           departure: "",
@@ -149,6 +156,21 @@ function handlePostback(senderID, postback, userSession) {
         setter(senderID, obj);
         // client.set(senderID, JSON.stringify(obj))
       });
+      break;
+
+    case "letter_model":
+      new_obj.lang = userSession.lang;
+      setter(senderID, new_obj);
+      //sendServicesQuickReply(senderID, userSession, locales.ask_letter_type[lang], "letter_model")
+      sendTypeLetterQuickReply(senderID, userSession, locales.ask_letter_type[lang])
+      getter(senderID, function(obj) {
+        let new_obj = {};
+        new_obj.lang = obj.lang;
+        new_obj["letter_model"] = true;
+        setter(senderID, new_obj);
+        // client.set(senderID, JSON.stringify(obj))
+      });
+      
       break;
     case "lyrics":
       new_obj.lang = userSession.lang;

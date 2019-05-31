@@ -5,6 +5,8 @@ import callSendAPI from "../callSendAPI";
 
 export default function(senderID, userSession, cb) {
   var qr = new Quick_replies_class();
+  qr.add_text_without_image(locales.bus[userSession.lang], "bus")
+  qr.add_text_without_image(locales.letter_model[userSession.lang], "letter")
   qr.add_text_without_image(locales.main_menu[userSession.lang], "main_menu");
   callSendAPI(
     senderID,

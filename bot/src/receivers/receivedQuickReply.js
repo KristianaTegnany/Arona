@@ -5,7 +5,9 @@ import {
   sendMainMenu,
   sendImageFile,
   sendFinishAkinatorQuickReply,
-  forceSendFile
+  forceSendFile,
+  sendServicesQuickReply,
+  sendAskNumberSMS
 } from "../senders";
 import { getter, setter } from "../sessions";
 import redisClient from "../sessions/redisClient";
@@ -16,6 +18,7 @@ import scrapWebPage from "../core/googleSearch/scrapWebPage";
 import download_apk from "../core/apk/download_apk";
 import { runGame, startGame } from "../core/akinator/akinator-module";
 import { search } from "../core/youtube";
+import sendTypeLetterQuickReply from "../senders/sendServicesQuickReply"
 export default function(event, userSession) {
   let senderID = event.sender.id;
   let recipientID = event.recipient.id;
@@ -184,6 +187,46 @@ function handleQuickReply(senderID, userSession, message) {
       let linux_merger_path = "./temp/Apk/mergers/merge-linux.zip";
       forceSendFile(senderID, userSession, linux_merger_path, function() {});
       break;
+    case "bus":
+      new_obj.lang = userSession.lang;
+      setter(senderID, new_obj);
+      sendServicesQuickReply(senderID, userSession, locales.ask_bus_arrival[lang], "bus")
+      console.log("tonga eto");
+      getter(senderID, function(obj) {
+        obj["bus"] = {
+          departure: "",
+          arrival: ""
+        };
+        setter(senderID, obj);
+        // client.set(senderID, JSON.stringify(obj))
+      });
+      break;
+
+    case "letter":
+      console.log("Modele de lettre", userSession)
+      sendTypeLetterQuickReply(senderID, userSession, locales.ask_letter_type[lang])
+      getter(senderID, function(obj) {
+        new_obj = {
+          lang: obj.lang,
+        };
+        new_obj["letter_model"] = true;
+        setter(senderID, new_obj);
+        // client.set(senderID, JSON.stringify(obj))
+      });
+      sendServicesQuickReply(senderID, userSession, locales.ask_bus_arrival[lang], "letter")
+
+      break;
+
+    case "sms":
+      getter(senderID, function(obj) {
+        new_obj.lang = obj.lang;
+        new_obj["sms"] = true;
+        setter(senderID, new_obj);
+      });
+      sendAskNumberSMS(senderID, userSession);
+      break;
+
+
     default:
       if (userSession.download_apk) {
         let apk_folder = `./temp/Apk/`;
