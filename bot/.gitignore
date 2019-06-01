@@ -14,6 +14,3 @@ drafts
 # Build Files
 lib
 /lib/**
-
-# package lock
-package-lock.json

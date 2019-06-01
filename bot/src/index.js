@@ -39,21 +39,3 @@ app.use(
     cookie: { secure: true }
   })
 );
-
-if (process.env.NODE_ENV == "dev ") {
-  const localtunnel = require("localtunnel");
-  var tunnel = localtunnel(
-    app.get("port"),
-    {
-      subdomain: process.env.subdomain
-    },
-    function(err, tunnel) {
-      if (err) console.log("erreur !");
-      else console.log(`your tunnel url is: ${tunnel.url}`);
-    }
-  );
-
-  tunnel.on("close", function() {
-    console.log("closed server ! Please ");
-  });
-}

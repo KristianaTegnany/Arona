@@ -44,6 +44,8 @@ export default function (recipientId, userSession, videos, infos, page) {
     }
     let qr = new Quick_replies_class()
     // qr.add_text_without_image(locales.download[userSession.lang], packageSuggs)
+    qr.add_text_without_image(locales.lyrics[userSession.lang], "lyrics")
+    qr.add_text_without_image(locales.akinator[userSession.lang], "akinator")
     qr.add_text_without_image(locales.main_menu[userSession.lang], "main_menu")
     qr.add_text_without_image(locales.next[userSession.lang], JSON.stringify({
         type : 'next',

@@ -7,7 +7,8 @@ import {
     sendDivertissementMenu,
     sendServicesMenu,
     sendMainMenu,
-    sendDivertissementMenuQuickReply
+    sendDivertissementMenuQuickReply,
+    sendAronaPlusQuickReply
 } from '../../senders'
 import {
     getter
@@ -28,7 +29,7 @@ function recursiveSendTextMessage(senderID,userSession, parts, i) {
         if (i+1 < parts.length) {
             recursiveSendTextMessage(senderID,userSession, parts, i + 1)
         } else {
-            sendDivertissementMenuQuickReply(senderID,userSession, locales.choose_divertissement_menu_or_search_another[userSession.lang])
+            sendAronaPlusQuickReply(senderID,userSession, locales.choose_divertissement_menu_or_search_another[userSession.lang],"lyrics")
         }
     })
 }

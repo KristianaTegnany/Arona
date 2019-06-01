@@ -1,0 +1,13 @@
+# Vim temp files
+**/*.swp
+
+# IDE-specific files
+.idea
+**/.vscode
+
+# Virtualenv
+.venv
+
+
+# Dev env docker volumes
+.volumes

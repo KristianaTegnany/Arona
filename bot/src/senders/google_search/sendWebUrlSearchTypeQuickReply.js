@@ -6,7 +6,6 @@ export default function (recipientId, userSession, messageText, cb) {
   var qr = new Quick_replies_class()
   qr.add_text_without_image(locales.page_download[userSession.lang], "url_page_download")
   qr.add_text_without_image(locales.page_screenshoot[userSession.lang], "url_page_screenshoot")
-
   callSendAPI(recipientId, {
     text: messageText,
     quick_replies: create_quick_replies(qr)
