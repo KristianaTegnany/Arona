@@ -7,4 +7,5 @@ const ngrok = require("ngrok");
   });
 
   console.log(url);
+  console.log(process.env.webhookUrl)
 })();

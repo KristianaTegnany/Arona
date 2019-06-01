@@ -211,7 +211,6 @@ function handleQuickReply(senderID, userSession, message) {
         locales.ask_bus_arrival[lang],
         "bus"
       );
-      console.log("tonga eto");
       getter(senderID, function(obj) {
         obj["bus"] = {
           departure: "",

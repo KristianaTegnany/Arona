@@ -123,7 +123,6 @@ function handlePostback(senderID, postback, userSession) {
   let lang = userSession.lang;
   let new_obj = {};
   console.log(postback.payload);
-  console.log("eto ");
 
   switch (postback.payload) {
     case "show.divertissement_menu":
@@ -146,7 +145,6 @@ function handlePostback(senderID, postback, userSession) {
       new_obj.lang = userSession.lang;
       setter(senderID, new_obj);
       //sendTextMessage(senderID, locales.ask_bus_arrival[lang]);
-      console.log("tonga eto");
 
       sendServicesQuickReply(
         senderID,

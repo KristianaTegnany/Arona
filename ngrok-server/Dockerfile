@@ -1,5 +1,5 @@
 FROM node:10
-LABEL maintainer="Diamondra Rasoamanana <diamondraras@gmail.com>"
+LABEL maintainer="Arona Developers <aronabot.developers@gmail.com>"
 LABEL version="0.1.0"
 # -----------------------------------------------------------------------------
 

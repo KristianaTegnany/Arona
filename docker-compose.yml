@@ -6,15 +6,69 @@ services:
       dockerfile: dev.Dockerfile
     ports:
       - "8000:8000"
+    environment:
+      # akinatorServerUrl: 172.28.1.4:8080
+      MONGODB_DB: arona
+      MONGODB_HOST: mongo
+      MONGODB_PORT: 27017
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    depends_on:
+      - mongo
+      - redis
     volumes:
       - ./bot/src:/app/src
+      - ./bot/locales:/app/locales
+      - ./bot/static:/app/static
+    networks:
+      arona_network:
+        ipv4_address: 172.28.1.1
   ngrok:
     build:
       context: ngrok-server
       dockerfile: Dockerfile
     environment:
       authtoken: 3NmgMiQTtyKgndgsv4jpH_3RdkiJzH5DpiBbZFd8qSY
-      port: 172.21.0.2:8000
+      port: 172.28.1.1:8000
       webhookUrl: https://developers.facebook.com/apps/336380870334023/webhooks/
     volumes:
       - ./ngrok-server/:/app/
+    networks:
+      arona_network:
+        ipv4_address: 172.28.1.2
+  web:
+    build:
+      context: web
+    ports:
+      - "5000:5000"
+    networks:
+      arona_network:
+        ipv4_address: 172.28.1.3
+  mongo:
+    image: mongo:4.1.11
+    volumes:
+      - ./.volumes/mongo/data:/data/db
+    networks:
+      arona_network:
+        ipv4_address: 172.28.1.4
+  redis:
+    image: redis:alpine
+    volumes:
+      - ./.volumes/redis/data:/data
+    networks:
+      arona_network:
+        ipv4_address: 172.28.1.5
+
+  akinator:
+    build:
+      context: akinator-api
+      dockerfile: Dockerfile
+    networks:
+      arona_network:
+        ipv4_address: 172.28.1.6
+networks:
+  arona_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/16

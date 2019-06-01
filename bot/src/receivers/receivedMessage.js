@@ -92,8 +92,9 @@ export default function(event, userSession) {
                 sendGoogleQuickReply(
                   senderID,
                   userSession,
-                  locales.abusiveContent[userSession.lang]
-                ,"google_search");
+                  locales.abusiveContent[userSession.lang],
+                  "google_search"
+                );
               }
             });
           }
@@ -113,7 +114,12 @@ export default function(event, userSession) {
     } else if (userSession.translate) {
       userSession.translate = messageText;
       setter(senderID, userSession);
-      sendTranslateQuickReply(senderID,userSession,locales.ask_translate_lang[userSession.lang])
+
+      sendTranslateQuickReply(
+        senderID,
+        userSession,
+        locales.ask_translate_lang[userSession.lang]
+      );
     } else if (userSession.download_apk) {
       search_apk(senderID, userSession, messageText, function() {});
     } else {

@@ -2,9 +2,9 @@ import redis from 'redis'
 
 
 export default redis.createClient({
-    "port": process.env.redisPort,
+    "port": process.env.REDIS_PORT,
 
-    "password":  process.env.redisPassword,
+    // "password":  process.env.redisPassword,
 
-    "host": process.env.redisHost
+    "host": process.env.REDIS_HOST
 })
