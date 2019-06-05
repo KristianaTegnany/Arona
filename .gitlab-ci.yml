@@ -25,17 +25,13 @@ stages:
     refs: &staging_only
       - staging
 
-.changes_backend:
+.changes_bot:
   only:
-    changes: &changes_backend
-      - backend/**/*
+    changes: &changes_bot
+      - bot/**/*
       - .gitlab-ci.yml
 
-.changes_frontend:
-  only:
-    changes: &changes_frontend
-      - frontend/**/*
-      - .gitlab-ci.yml
+
 
 ###############################################################################
 
