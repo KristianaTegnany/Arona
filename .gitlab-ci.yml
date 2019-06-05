@@ -46,7 +46,7 @@ staging_bot:
   
   script:
     - rm -rf .git
-    - cd backend
+    - cd bot
     - git init
     - git add .
     - git commit -m 'Staging Arona Bot'
