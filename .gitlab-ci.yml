@@ -1,0 +1,58 @@
+stages:
+  #- build
+  #- test
+  - deploy
+
+###############################################################################
+# Anchors
+###############################################################################
+
+.config_git: &config_git
+    before_script:
+      - git config --global user.email $GIT_USER_EMAIL
+      - git config --global user.name $GIT_USER_NAME
+
+.deploy_heroku: &deploy_heroku
+  after_script:
+    - cd $HEROKU_DIR
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=$HEROKU_APP --api-key=$DEPLOY_KEY
+
+.staging_only:
+  only:
+    refs: &staging_only
+      - staging
+
+.changes_backend:
+  only:
+    changes: &changes_backend
+      - backend/**/*
+      - .gitlab-ci.yml
+
+.changes_frontend:
+  only:
+    changes: &changes_frontend
+      - frontend/**/*
+      - .gitlab-ci.yml
+
+###############################################################################
+
+staging_bot:
+  stage: deploy
+  variables:
+      HEROKU_APP: aronadevbot
+      HEROKU_DIR: bot
+  <<: *config_git
+  <<: *deploy_heroku
+  
+  script:
+    - rm -rf .git
+    - cd backend
+    - git init
+    - git add .
+    - git commit -m 'Staging Arona Bot'
+  only:
+    refs: *staging_only
+    changes: *changes_bot
