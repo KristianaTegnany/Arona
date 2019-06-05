@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "set NODE_ENV=dev && nodemon --exec babel-node src/index.js -i ",
     "start": "nodemon --exec babel-node src/index.js -i ",
+    "start:prod": "node --exec babel-node src/index.js -i ",
     "ngrok": "start cmd /k >ngrok ngrok http 8000 --bind-tls=true && nodemon --exec babel-node src/index.js -i ",
     "prod": "node ./lib/index.js",
     "clean": "rm -rf build && mkdir build",
