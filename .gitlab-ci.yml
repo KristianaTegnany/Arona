@@ -8,9 +8,9 @@ stages:
 ###############################################################################
 
 .config_git: &config_git
-    before_script:
-      - git config --global user.email $GIT_USER_EMAIL
-      - git config --global user.name $GIT_USER_NAME
+  before_script:
+    - git config --global user.email $GIT_USER_EMAIL
+    - git config --global user.name $GIT_USER_NAME
 
 .deploy_heroku: &deploy_heroku
   after_script:
