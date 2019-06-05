@@ -14,8 +14,8 @@
     "prod": "node ./lib/index.js",
     "clean": "rm -rf build && mkdir build",
     "build-server": "babel -d ./build ./ -s",
-    "build": "npm run clean && npm run build-server",
-    "winbuild": "npx babel src --out-dir lib",
+    "winbuild": "npm run clean && npm run build-server",
+    "build": "npx babel src --out-dir lib",
     "deploy": "npm run winbuild && git add . && git commit && git push origin && git push heroku master"
   },
   "repository": {
