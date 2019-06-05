@@ -20,10 +20,10 @@ stages:
     - gem install dpl
     - dpl --provider=heroku --app=$HEROKU_APP --api-key=$DEPLOY_KEY
 
-.develop_only:
+.staging_only:
   only:
-    refs: &develop_only
-      - develop
+    refs: &staging_only
+      - staging
 
 .changes_backend:
   only:
