@@ -39,7 +39,7 @@ stages:
 staging_bot:
   stage: deploy
   variables:
-      HEROKU_APP: aronadevbot
+      HEROKU_APP: aronabotdev
       HEROKU_DIR: bot
   <<: *config_git
   <<: *deploy_heroku
