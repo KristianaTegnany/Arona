@@ -16,7 +16,7 @@
     "clean": "rm -rf build && mkdir build",
     "build-server": "babel -d ./build ./ -s",
     "build": "npm run clean && npm run build-server",
-    "winbuild": "npx babel src --out-dir lib",
+    "winbuild": "babel src -d lib",
     "deploy": "npm run winbuild && git add . && git commit && git push origin && git push heroku master",
     "postinstall": "npm run winbuild"
   },
@@ -85,8 +85,6 @@
     "@babel/core": "^7.2.2",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
-    "babel-cli": "^6.26.0",
-    "node-hot-loader": "^1.12.3",
     "nodemon": "^1.18.9",
     "webpack": "^4.29.0"
   }
