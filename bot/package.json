@@ -50,7 +50,6 @@
     "human-readable-time": "^0.3.0",
     "image-moderation": "^1.0.5",
     "is-url": "^1.2.4",
-    "localtunnel": "^1.9.1",
     "mkdirp": "^0.5.1",
     "node-cmd": "^3.0.0",
     "node-dijkstra": "^2.5.0",
@@ -86,6 +85,7 @@
     "@babel/core": "^7.2.2",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
+    "babel-cli": "^6.26.0",
     "node-hot-loader": "^1.12.3",
     "nodemon": "^1.18.9",
     "webpack": "^4.29.0"
