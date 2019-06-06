@@ -18,7 +18,7 @@
     "build": "npm run clean && npm run build-server",
     "winbuild": "npx babel src --out-dir lib",
     "deploy": "npm run winbuild && git add . && git commit && git push origin && git push heroku master",
-    "heroku-postbuild": "npx babel src --out-dir lib"
+    "postinstall": "npm run winbuild"
   },
   "repository": {
     "type": "git",
