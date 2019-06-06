@@ -16,7 +16,7 @@
     "clean": "rm -rf build && mkdir build",
     "build-server": "babel -d ./build ./ -s",
     "build": "npm run clean && npm run build-server",
-    "winbuild": "babel src -d lib",
+    "winbuild": "./node_modules/.bin/babel src -d lib",
     "deploy": "npm run winbuild && git add . && git commit && git push origin && git push heroku master",
     "postinstall": "npm run winbuild"
   },
