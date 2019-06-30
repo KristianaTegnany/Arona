@@ -22,7 +22,6 @@ import download_apk from "../core/apk/download_apk";
 import processTranslate from "../core/translate/process";
 import { runGame, startGame } from "../core/akinator/akinator-module";
 import { search } from "../core/youtube";
-import sendTypeLetterQuickReply from "../senders/sendServicesQuickReply";
 export default function(event, userSession) {
   let senderID = event.sender.id;
   let recipientID = event.recipient.id;
@@ -83,17 +82,18 @@ function handleQuickReply(senderID, userSession, message) {
   let lang = userSession.lang;
   let quick_reply = message.quick_reply;
   let new_obj = {};
+  console.log(quick_reply.payload)
   switch (quick_reply.payload) {
     case "youtube":
-      sendTextMessage(senderID, locales.ask_youtube_search[lang]);
-      getter(senderID, function(obj) {
-        new_obj = {
-          lang: obj.lang
-        };
-        new_obj["youtube"] = true;
-        setter(senderID, new_obj);
-        // client.set(senderID, JSON.stringify(obj))
-      });
+      // sendTextMessage(senderID, locales.ask_youtube_search[lang]);
+      // getter(senderID, function(obj) {
+      //   new_obj = {
+      //     lang: obj.lang
+      //   };
+      //   new_obj["youtube"] = true;
+      //   setter(senderID, new_obj);
+      //   // client.set(senderID, JSON.stringify(obj))
+      // });
       break;
     case "lyrics":
       sendTextMessage(senderID, locales.ask_lyric_title[lang]);
@@ -221,15 +221,16 @@ function handleQuickReply(senderID, userSession, message) {
       });
       break;
 
-    case "letter":
+    case "letter_model":
       let new_obj = {};
       new_obj.lang = userSession.lang;
       setter(senderID, new_obj);
       //sendServicesQuickReply(senderID, userSession, locales.ask_letter_type[lang], "letter_model")
-      sendTypeLetterQuickReply(
+      sendServicesQuickReply(
         senderID,
         userSession,
-        locales.ask_letter_type[lang]
+        locales.ask_letter_type[lang],
+        "letter"
       );
 
       break;
@@ -280,18 +281,18 @@ function handleQuickReply(senderID, userSession, message) {
       });
       break;
     case "download_apk":
-      getter(senderID, function(obj) {
-        new_obj.lang = obj.lang;
-        new_obj["download_apk"] = true;
-        setter(senderID, new_obj);
-      });
+      // getter(senderID, function(obj) {
+      //   new_obj.lang = obj.lang;
+      //   new_obj["download_apk"] = true;
+      //   setter(senderID, new_obj);
+      // });
 
-      sendHomeMessageQuickReply(
-        senderID,
-        userSession,
-        locales.ask_apk_keyword[userSession.lang],
-        function() {}
-      );
+      // sendHomeMessageQuickReply(
+      //   senderID,
+      //   userSession,
+      //   locales.ask_apk_keyword[userSession.lang],
+      //   function() {}
+      // );
       break;
 
     default:

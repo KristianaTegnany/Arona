@@ -10,7 +10,6 @@ import {
   sendHomeMessageQuickReply,
   sendQuickReplyAfterApkSent,
   sendAronaPlusQuickReply,
-  sendTypeLetterQuickReply,
   sendServicesQuickReply,
   sendGoogleQuickReply
 } from "../senders";
@@ -166,10 +165,11 @@ function handlePostback(senderID, postback, userSession) {
       new_obj.lang = userSession.lang;
       setter(senderID, new_obj);
       //sendServicesQuickReply(senderID, userSession, locales.ask_letter_type[lang], "letter_model")
-      sendTypeLetterQuickReply(
+      sendServicesQuickReply(
         senderID,
         userSession,
-        locales.ask_letter_type[lang]
+        locales.ask_letter_type[lang],
+        "letter "
       );
       getter(senderID, function(obj) {
         let new_obj = {};
@@ -200,18 +200,18 @@ function handlePostback(senderID, postback, userSession) {
       break;
     case "youtube":
       //sendTextMessage(senderID, locales.ask_youtube_search[lang]);
-      sendAronaPlusQuickReply(
-        senderID,
-        userSession,
-        locales.ask_youtube_search[lang],
-        "youtube"
-      );
-      getter(senderID, function(obj) {
-        new_obj.lang = obj.lang;
-        new_obj["youtube"] = true;
-        setter(senderID, new_obj);
-        // client.set(senderID, JSON.stringify(obj))
-      });
+      // sendAronaPlusQuickReply(
+      //   senderID,
+      //   userSession,
+      //   locales.ask_youtube_search[lang],
+      //   "youtube"
+      // );
+      // getter(senderID, function(obj) {
+      //   new_obj.lang = obj.lang;
+      //   new_obj["youtube"] = true;
+      //   setter(senderID, new_obj);
+      //   // client.set(senderID, JSON.stringify(obj))
+      // });
       break;
     case "translate":
       sendGoogleQuickReply(
@@ -267,18 +267,18 @@ function handlePostback(senderID, postback, userSession) {
       sendAskNumberSMS(senderID, userSession);
       break;
     case "download_apk":
-      getter(senderID, function(obj) {
-        new_obj.lang = obj.lang;
-        new_obj["download_apk"] = true;
-        setter(senderID, new_obj);
-      });
+      // getter(senderID, function(obj) {
+      //   new_obj.lang = obj.lang;
+      //   new_obj["download_apk"] = true;
+      //   setter(senderID, new_obj);
+      // });
 
-      sendHomeMessageQuickReply(
-        senderID,
-        userSession,
-        locales.ask_apk_keyword[userSession.lang],
-        function() {}
-      );
+      // sendHomeMessageQuickReply(
+      //   senderID,
+      //   userSession,
+      //   locales.ask_apk_keyword[userSession.lang],
+      //   function() {}
+      // );
       break;
     default:
       break;
