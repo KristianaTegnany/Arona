@@ -10,7 +10,7 @@ export default function (recipientId,userSession, messageText, toDisable, cb) {
   var qr = new Quick_replies_class()
 
   if(toDisable == "bus"){
-    qr.add_text_without_image(locales.letter_model[userSession.lang], "letter")
+    qr.add_text_without_image(locales.letter_model[userSession.lang], "letter_model")
     qr.add_text_without_image(locales.send_sms[userSession.lang], "sms")
   }
   else if(toDisable == "letter") {
@@ -19,7 +19,7 @@ export default function (recipientId,userSession, messageText, toDisable, cb) {
   }
   else {
     qr.add_text_without_image(locales.bus[userSession.lang], "bus")
-    qr.add_text_without_image(locales.letter_model[userSession.lang], "letter")
+    qr.add_text_without_image(locales.letter_model[userSession.lang], "letter_model")
   }
   qr.add_text_without_image(locales.main_menu[userSession.lang], "main_menu")
 
