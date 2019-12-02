@@ -2,6 +2,12 @@ import sendTextMessage from "./sendTextMessage";
 import sendDivertissementMenu from "./sendDivertissementMenu";
 import sendServicesMenu from "./sendServicesMenu";
 import sendMainMenu from "./sendMainMenu";
+import sendUrgenceAction from "./urgence/sendUrgenceAction";
+import sendAmbulanceListe from "./urgence/sendAmbulanceListe";
+import sendPharmacieListe from "./urgence/sendPharmacieListe";
+import sendPoliceListe from "./urgence/sendPoliceListe";
+import sendPompierListe from "./urgence/sendPompierListe";
+import sendUrgenceMainMenu from "./urgence/sendUrgenceMainMenu";
 import sendMainMenuQuickReply from "./sendMainMenuQuickReply";
 import sendYoutubeSuggs from "./youtube/sendYoutubeSuggs";
 import sendSongLyricsList from "./lyrics/sendSongLyricsList";
@@ -45,6 +51,12 @@ export {
   sendDivertissementMenu,
   sendServicesMenu,
   sendMainMenu,
+  sendUrgenceAction,
+  sendAmbulanceListe,
+  sendPharmacieListe,
+  sendPoliceListe,
+  sendPompierListe,
+  sendUrgenceMainMenu,
   sendMainMenuQuickReply,
   sendSearchTypeQuickReply,
   sendSongLyricsList,

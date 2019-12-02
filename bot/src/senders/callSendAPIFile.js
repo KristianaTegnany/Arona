@@ -1,3 +1,4 @@
+require('dotenv').load();
 import https from 'https'
 import sendDivertissementMenuQuickReply from './sendDivertissementMenuQuickReply';
 import locales from '../../locales/data'
@@ -8,7 +9,7 @@ export default function callSendAPI(messageData, recipientId, userSession, cb, f
     var options = {
         method: 'post',
         host: 'graph.facebook.com',
-        path: '/v2.6/me/messages?access_token=' + process.env.accessToken,
+        path: '/v2.6/me/messages?access_token=EAAil04WAIMMBAPpXLZCsHNIJknRClkmWypIZAwQqOPdhT83J1vABUblInC2bN2JFZBi9ZCNRWkjvTGIZB8CTwtfFzVKzGO0fZBNtZAHbfk5lz1m6hMnAH2IXSv0V8UHWqCnINa67dGQ9FuK1FvgzbprDxIZAtfEDTDOOXuGDAdYFnJIJWN27SdSG',
         headers: messageData.getHeaders()
     };
     var request = https.request(options);

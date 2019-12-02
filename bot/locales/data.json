@@ -160,14 +160,34 @@
         "mg": "Fialam-boly"
     },
     "services": {
-        "fr": "Services",
+        "fr": "Arona Services",
         "en": "Services",
         "mg": "Tolotra"
     },
     "urgence": {
-        "fr": "Urgence",
+        "fr": "Urgences",
         "en": "Emergency",
         "mg": "Vonjy taitra"
+    },
+    "pharmacie": {
+        "fr": "Pharmacie",
+        "en": "Pharmacie",
+        "mg": "Pharmacie"
+    },
+    "ambulance": {
+        "fr": "Ambulance",
+        "en": "Ambulance",
+        "mg": "Ambulance"
+    },
+    "pompier": {
+        "fr": "Pompier",
+        "en": "Pompier",
+        "mg": "Pompier"
+    },
+    "police": {
+        "fr": "Police",
+        "en": "Police",
+        "mg": "Police"
     },
     "arona_services": {
         "fr": "Arona services",
@@ -175,7 +195,7 @@
         "mg": "Arona services"
     },
     "send_sms": {
-        "fr": "Envoyer un SMS",
+        "fr": "Sms d'urgence",
         "en": "Send a text message",
         "mg": "bar"
     },
@@ -204,8 +224,13 @@
         "en": "Letter Template",
         "mg": "Letter Template"
     },
+    "video_amusant": {
+        "fr": "Vidéo Amusante",
+        "en": "Funny Video",
+        "mg": "Video Mahafinaritra"
+    },
     "video_musique": {
-        "fr": "Videos & Musiques",
+        "fr": "Youtube",
         "en": "Videos & Musics",
         "mg": "Videos & Mozika"
     },

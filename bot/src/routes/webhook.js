@@ -1,3 +1,4 @@
+require('dotenv').load();
 import {
     receivedMessage,
     receivedPostback,
@@ -12,8 +13,7 @@ import defaultSession from '../sessions/defaultSession'
 const router = require('express').Router()
 
 router.get('/', function (req, res) {
-    console.log("webhook")
-    if (req.query['hub.verify_token'] === process.env.verifyToken) {
+    if (req.query['hub.verify_token'] == "arona") {
         res.send(req.query['hub.challenge'])
     } else {
         res.send('Error, wrong token')

@@ -1,3 +1,4 @@
+require('dotenv').load();
 const client = require("twilio")(process.env.accountSid, process.env.authToken);
 
 export default function(number, text, success_cb, error_cb) {

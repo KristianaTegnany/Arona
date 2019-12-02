@@ -1,5 +1,7 @@
+require('dotenv').load();
 const request = require('request')
 export default function (sender, msgData, cb) {
+    console.log(JSON.stringify(msgData))
     const token = process.env.accessToken
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
@@ -11,7 +13,7 @@ export default function (sender, msgData, cb) {
             recipient: {
                 id: sender
             },
-            message: msgData,
+            message: msgData
         }
     }, function (error, response, body) {
         if (cb) {

@@ -4,7 +4,9 @@ import {
   sendWebUrlSearchTypeQuickReply,
   sendSearchTypeQuickReply,
   sendTranslateQuickReply,
-  sendGoogleQuickReply
+  sendGoogleQuickReply,
+  sendServicesQuickReply,
+  sendUrgenceAction
 } from "../senders";
 import sendMainMenu from "../senders/sendMainMenu";
 import { getter, setter, eraser } from "../sessions";
@@ -46,8 +48,8 @@ export default function(event, userSession) {
     );
     return;
   }
-
   if (messageText) {
+    //userSession.lyric = true
     if (userSession.lyric) {
       // sendTextMessage(senderID, `Recherche de lyric ${messageText}`)
       showSuggests(senderID, messageText, userSession);
@@ -68,6 +70,23 @@ export default function(event, userSession) {
         setter(senderID, userSession);
         let { bus } = userSession;
         busAsking(senderID, userSession, bus.departure, bus.arrival);
+      }
+    } else if(userSession.urgence) {
+      if (messageText == "Menu Principale") {
+        userSession = {lang: userSession.lang}
+        setter(senderID, userSession);
+        sendMainMenu(senderID, userSession);
+      }
+      else {
+        setter(senderID, userSession);
+        userSession.urgence.action = messageText;
+        setter(senderID, userSession);
+        sendServicesQuickReply(
+          senderID,
+          userSession,
+          locales.urgence[userSession.lang],
+          "urgence"
+        );
       }
     } else if (userSession.google_search) {
       switch (userSession.google_search) {

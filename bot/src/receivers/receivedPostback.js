@@ -3,6 +3,12 @@ import {
   sendDivertissementMenu,
   sendServicesMenu,
   sendMainMenu,
+  sendUrgenceAction,
+  sendAmbulanceListe,
+  sendPharmacieListe,
+  sendPoliceListe,
+  sendPompierListe,
+  sendUrgenceMainMenu,
   sendSearchTypeQuickReply,
   sendImageFile,
   sendMainMenuQuickReply,
@@ -27,6 +33,7 @@ import genererateScreenshoots from "../core/apk/genererateScreenshoots";
 import download_apk from "../core/apk/download_apk";
 import { startGame } from "../core/akinator/akinator-module";
 import { sendQuestionQuickReply, sendAskNumberSMS } from "../senders";
+
 export default function(event, userSession) {
   let senderID = event.sender.id;
   let recipientID = event.recipient.id;
@@ -121,7 +128,6 @@ export default function(event, userSession) {
 function handlePostback(senderID, postback, userSession) {
   let lang = userSession.lang;
   let new_obj = {};
-  console.log(postback.payload);
 
   switch (postback.payload) {
     case "show.divertissement_menu":
@@ -135,7 +141,7 @@ function handlePostback(senderID, postback, userSession) {
       setter(senderID, new_obj);
       sendServicesMenu(senderID, userSession);
       break;
-    case "get_started":
+    case "main_menu":
       new_obj.lang = userSession.lang;
       setter(senderID, new_obj);
       sendMainMenu(senderID, userSession);
@@ -161,6 +167,50 @@ function handlePostback(senderID, postback, userSession) {
       });
       break;
 
+    case "urgence":
+      new_obj.lang = userSession.lang;
+      new_obj["urgence"] = {
+      };
+      setter(senderID, new_obj);
+      sendUrgenceMainMenu(senderID, userSession);
+      break;
+    
+    case "ambulance":
+      new_obj.lang = userSession.lang;
+      new_obj["urgence"] = {
+        type: "ambulance"
+      };
+      setter(senderID, new_obj);
+      sendAmbulanceListe(senderID, userSession);
+      break;
+        
+    case "pharmacie":
+      new_obj.lang = userSession.lang;
+      new_obj["urgence"] = {
+        type: "pharmacie"
+      };
+      setter(senderID, new_obj);
+      sendPharmacieListe(senderID, userSession);
+      break;
+    
+    case "police":
+      new_obj.lang = userSession.lang;
+      new_obj["urgence"] = {
+        type: "police"
+      };
+      setter(senderID, new_obj);
+      sendPoliceListe(senderID, userSession);
+      break;
+    
+    case "pompier":
+      new_obj.lang = userSession.lang;
+      new_obj["urgence"] = {
+        type: "pompier"
+      };
+      setter(senderID, new_obj);
+      sendPompierListe(senderID, userSession);
+      break;
+    
     case "letter_model":
       new_obj.lang = userSession.lang;
       setter(senderID, new_obj);
@@ -266,6 +316,7 @@ function handlePostback(senderID, postback, userSession) {
       });
       sendAskNumberSMS(senderID, userSession);
       break;
+      
     case "download_apk":
       // getter(senderID, function(obj) {
       //   new_obj.lang = obj.lang;

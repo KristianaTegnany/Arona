@@ -220,7 +220,7 @@ function handleQuickReply(senderID, userSession, message) {
         // client.set(senderID, JSON.stringify(obj))
       });
       break;
-
+    
     case "letter_model":
       let new_obj = {};
       new_obj.lang = userSession.lang;

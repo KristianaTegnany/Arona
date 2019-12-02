@@ -1,3 +1,4 @@
+require('dotenv').load();
 import callSendAPI from "./callSendAPI";
 import locales from "../../locales/data";
 export default function(recipientId, userSession) {
@@ -7,16 +8,12 @@ export default function(recipientId, userSession) {
       type: "template",
       payload: {
         template_type: "generic",
+        image_aspect_ratio: "square",
         elements: [
           {
             title: locales.arona_plus[lang],
-            image_url: `${process.env.currentUrl}/main_menu/arona_plus.png`,
+            image_url: 'https://medias3.prestastore.com/835054-pbig/chat-bot-for-social-networking.jpg',
             buttons: [
-              {
-                type: "postback",
-                title: locales.lyrics[lang],
-                payload: "lyrics"
-              },
               {
                 type: "postback",
                 title: locales.akinator[lang],
@@ -24,19 +21,24 @@ export default function(recipientId, userSession) {
               },
               {
                 type: "postback",
-                title: locales.video_musique[lang],
-                payload: "youtube"
+                title: locales.lyrics[lang],
+                payload: "lyrics"
+              },
+              {
+                type: "postback",
+                title: locales.video_amusant[lang],
+                payload: "video"
               }
             ]
           },
           {
             title: locales.google[lang],
-            image_url: `${process.env.currentUrl}/main_menu/google.png`,
+            image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDPRw6YeKWJpC0fJzC8xrb5OBTGR1UoD9zfXwF8hrANGvCWvSY&s',
             buttons: [
               {
                 type: "postback",
-                title: locales.translate[lang],
-                payload: "translate"
+                title: locales.video_musique[lang],
+                payload: "youtube"
               },
               {
                 type: "postback",
@@ -45,20 +47,22 @@ export default function(recipientId, userSession) {
               },
               {
                 type: "postback",
-                title: locales.download_apk[lang],
-                payload: "download_apk"
+                title: locales.translate[lang],
+                payload: "translate"
               }
-            ]
-          },
-          {
-            title: locales.services[lang],
-            image_url: `${process.env.currentUrl}/main_menu/arona_services.png`,
-            buttons: [
+              /*,
               {
                 type: "postback",
-                title: locales.bus[lang],
-                payload: "bus"
-              },
+                title: locales.download_apk[lang],
+                payload: "download_apk"
+              }*/
+            ]
+          }/*,
+          {
+            title: locales.services[lang],
+            image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwzu7Hg3kWXVC-pfoG4ENdIiah5lpi-SyoWvf_S99pjeYQcYMl&s',
+            subtitle: "Lettre et SMS",
+            buttons: [
               {
                 type: "postback",
                 title: locales.letter_model[lang],
@@ -70,144 +74,28 @@ export default function(recipientId, userSession) {
                 payload: "sms"
               }
             ]
+          }*/,
+          {
+            title: locales.services[lang],
+            image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQckT6DDkARh49KXxb6LNX9sDQx8i2AFubbkcb9xLenYzUGOSN&s',
+            buttons: [
+              {
+                type: "postback",
+                title: locales.bus[lang],
+                payload: "bus"
+              },
+              {
+                type: "postback",
+                title: locales.urgence[lang],
+                payload: "urgence"
+              },
+              {
+                type: "postback",
+                title: locales.send_sms[lang],
+                payload: "sms"
+              }
+            ]
           }
-          //   {
-          //     title: locales.hotel_spa[lang],
-          //     image_url: `${process.env.currentUrl}/main_menu/restaurant.png`,
-          //     buttons: [
-          //       {
-          //         type: "postback",
-          //         title: locales.hotels_et_motels[lang],
-          //         payload: "restaurant"
-          //       },
-          //       {
-          //         type: "postback",
-          //         title: locales.chambre_d_hotes[lang],
-          //         payload: "fast_food"
-          //       },
-          //       {
-          //         type: "postback",
-          //         title: locales.maison_d_hotes[lang],
-          //         payload: "bar"
-          //       }
-          //     ]
-          //   },
-          //   {
-          //     title: locales.auto_moto[lang],
-          //     image_url: `${process.env.currentUrl}/main_menu/restaurant.png`,
-          //     buttons: [
-          //       {
-          //         type: "postback",
-          //         title: locales.achat_auto_moto[lang],
-          //         payload: "restaurant"
-          //       },
-          //       {
-          //         type: "postback",
-          //         title: locales.pieces_auto_moto[lang],
-          //         payload: "fast_food"
-          //       },
-          //       {
-          //         type: "postback",
-          //         title: locales.station_service_depanneurs_garage[lang],
-          //         payload: "bar"
-          //       }
-          //     ]
-          //   },
-          //   {
-          //     title: locales.location[lang],
-          //     image_url: `${process.env.currentUrl}/main_menu/restaurant.png`,
-          //     buttons: [
-          //       {
-          //         type: "postback",
-          //         title: locales.immobilier[lang],
-          //         payload: "restaurant"
-          //       },
-          //       {
-          //         type: "postback",
-          //         title: locales.auto_moto[lang],
-          //         payload: "fast_food"
-          //       },
-          //       {
-          //         type: "postback",
-          //         title: locales.autres[lang],
-          //         payload: "bar"
-          //       }
-          //     ]
-          //   },
-          //   {
-          //     title: locales.loisirs[lang],
-          //     image_url: `${process.env.currentUrl}/main_menu/restaurant.png`,
-          //     buttons: [
-          //       {
-          //         type: "postback",
-          //         title: locales.musique[lang],
-          //         payload: "restaurant"
-          //       },
-          //       {
-          //         type: "postback",
-          //         title: locales.evenement[lang],
-          //         payload: "fast_food"
-          //       },
-          //       {
-          //         type: "postback",
-          //         title: locales.spectacles[lang],
-          //         payload: "bar"
-          //       }
-          //     ]
-          //   },
-          //   {
-          //     title: locales.sante_et_bien_etre[lang],
-          //     image_url: `${process.env.currentUrl}/main_menu/restaurant.png`,
-          //     buttons: [
-          //       {
-          //         type: "postback",
-          //         title: locales.salon_de_beaute[lang],
-          //         payload: "restaurant"
-          //       },
-          //       {
-          //         type: "postback",
-          //         title: locales.etablissements_medical[lang],
-          //         payload: "fast_food"
-          //       },
-          //       {
-          //         type: "postback",
-          //         title: locales.sport_spa[lang],
-          //         payload: "bar"
-          //       }
-          //     ]
-          //   },
-          //   {
-          //     title: locales.recommandation[lang],
-          //     image_url: `${process.env.currentUrl}/main_menu/restaurant.png`,
-          //     buttons: [
-          //       {
-          //         type: "postback",
-          //         title: locales.cadeaux[lang],
-          //         payload: "restaurant"
-          //       }
-          //     ]
-          //   },
-          //   {
-          //     title: locales.etablissements_financieres[lang],
-          //     image_url: `${process.env.currentUrl}/main_menu/restaurant.png`,
-          //     buttons: [
-          //       {
-          //         type: "postback",
-          //         title: locales.banques[lang],
-          //         payload: "restaurant"
-          //       },
-          //       {
-          //         type: "postback",
-          //         title: locales.transfert_d_argent[lang],
-          //         payload: "fast_food"
-          //       },
-          //       {
-          //         type: "postback",
-          //         title: locales.autres_etablissements[lang],
-          //         payload: "bar"
-          //       }
-          //     ]
-          //   }
         ]
       }
     }

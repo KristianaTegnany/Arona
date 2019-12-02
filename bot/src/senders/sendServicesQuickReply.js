@@ -17,6 +17,10 @@ export default function (recipientId,userSession, messageText, toDisable, cb) {
     qr.add_text_without_image(locales.bus[userSession.lang], "bus")
     qr.add_text_without_image(locales.send_sms[userSession.lang], "sms")
   }
+  else if(toDisable == "urgence") {
+    qr.add_text_without_image(locales.letter_model[userSession.lang], "letter")
+    qr.add_text_without_image(locales.send_sms[userSession.lang], "sms")
+  }
   else {
     qr.add_text_without_image(locales.bus[userSession.lang], "bus")
     qr.add_text_without_image(locales.letter_model[userSession.lang], "letter_model")
