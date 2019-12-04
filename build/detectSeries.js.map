@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/neo-async/detectSeries.js"],"names":["module","exports","require","detectSeries"],"mappings":"AAAA;;AAEAA,MAAM,CAACC,OAAP,GAAiBC,OAAO,CAAC,SAAD,CAAP,CAAmBC,YAApC","sourcesContent":["'use strict';\n\nmodule.exports = require('./async').detectSeries;\n"],"file":"detectSeries.js"}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/cli-color/beep.js"],"names":["module"],"mappings":"AAAA;;AAEAA,MAAM,CAANA,OAAAA,GAAAA,MAAAA","sourcesContent":["'use strict';\n\nmodule.exports = '\\x07';\n"],"file":"beep.js"}

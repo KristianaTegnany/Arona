@@ -1,0 +1,48 @@
+[
+    {
+        "nom": "Services ambulances",
+        "lieu": "",
+        "contacts": [
+            "22 357 53"
+        ]
+    },
+    {
+        "nom": "Municipales",
+        "lieu": "",
+        "contacts": [
+            "22 200 40",
+            "033 65 333 22",
+            "033 65 444 22"
+        ]
+    },
+    {
+        "nom": "Polyclinique Ilafy",
+        "lieu": "",
+        "contacts": [
+            "22 425 66",
+            "22 425 69"
+        ]
+    },
+    {
+        "nom": "Espace medical",
+        "lieu": "",
+        "contacts": [
+            "22 625 66"
+        ]
+    },
+    {
+        "nom": "CDU",
+        "lieu": "",
+        "contacts": [
+            "22 329 56"
+        ]
+    },
+    {
+        "nom": "MM 24/24",
+        "lieu": "",
+        "contacts": [
+            "033 02 235 55",
+            "032 04 897 22"
+        ]
+    }
+]

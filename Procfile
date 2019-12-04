@@ -1,0 +1,1 @@
+web: ls && node ./lib/index.js

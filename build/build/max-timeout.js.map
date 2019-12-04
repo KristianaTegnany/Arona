@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/timers-ext/max-timeout.js"],"names":["module"],"mappings":"AAAA;;AAEAA,MAAM,CAANA,OAAAA,GAAAA,UAAAA","sourcesContent":["\"use strict\";\n\nmodule.exports = 2147483647;\n"],"file":"max-timeout.js"}

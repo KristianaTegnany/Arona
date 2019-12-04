@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/es-to-primitive/es6.js"],"names":["module","require"],"mappings":"AAAA;;AAEAA,MAAM,CAANA,OAAAA,GAAiBC,OAAO,CAAxBD,UAAwB,CAAxBA","sourcesContent":["'use strict';\n\nmodule.exports = require('./es2015');\n"],"file":"es6.js"}

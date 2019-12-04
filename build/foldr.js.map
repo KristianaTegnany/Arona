@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/neo-async/foldr.js"],"names":["module","exports","require","foldr"],"mappings":"AAAA;;AAEAA,MAAM,CAACC,OAAP,GAAiBC,OAAO,CAAC,SAAD,CAAP,CAAmBC,KAApC","sourcesContent":["'use strict';\n\nmodule.exports = require('./async').foldr;\n"],"file":"foldr.js"}

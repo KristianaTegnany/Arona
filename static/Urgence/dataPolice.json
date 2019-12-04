@@ -1,0 +1,73 @@
+[
+    {
+        "nom": "Centrale",
+        "lieu": "",
+        "contacts": [
+            "22 227 36"
+        ]
+    },
+    {
+        "nom": "1er Arrondissement",
+        "lieu": "",
+        "contacts": [
+            "22 280 54"
+        ]
+    },
+    {
+        "nom": "2ème Arrondissement",
+        "lieu": "",
+        "contacts": [
+            "22 309 46"
+        ]
+    },
+    {
+        "nom": "3ème Arrondissement",
+        "lieu": "",
+        "contacts": [
+            "22 291 30"
+        ]
+    },
+    {
+        "nom": "4ème Arrondissement",
+        "lieu": "",
+        "contacts": [
+            "22 291 30"
+        ]
+    },
+    {
+        "nom": "5ème Arrondissement",
+        "lieu": "",
+        "contacts": [
+            "22 280 48"
+        ]
+    },
+    {
+        "nom": "6ème Arrondissement",
+        "lieu": "",
+        "contacts": [
+            "22 225 52"
+        ]
+    },
+    {
+        "nom": "7ème Arrondissement",
+        "lieu": "",
+        "contacts": [
+            "22 291 29"
+        ]
+    },
+    {
+        "nom": "8ème Arrondissement",
+        "lieu": "",
+        "contacts": [
+            "22 493 25"
+        ]
+    },
+    {
+        "nom": "Brigade criminel",
+        "lieu": "",
+        "contacts": [
+            "22 205 84",
+            "22 230 84"
+        ]
+    }
+]

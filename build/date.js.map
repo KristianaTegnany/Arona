@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/lodash/date.js"],"names":["module","exports","require"],"mappings":"AAAAA,MAAM,CAACC,OAAP,GAAiB;AACf,SAAOC,OAAO,CAAC,OAAD;AADC,CAAjB","sourcesContent":["module.exports = {\n  'now': require('./now')\n};\n"],"file":"date.js"}

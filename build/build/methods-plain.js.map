@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/memoizee/methods-plain.js"],"names":["module","require"],"mappings":"AAAA;;AAEAA,MAAM,CAANA,OAAAA,GAAiBC,OAAO,CAAPA,eAAO,CAAPA,CAAyBA,OAAO,CAAjDD,SAAiD,CAAhCC,CAAjBD","sourcesContent":["\"use strict\";\n\nmodule.exports = require(\"./lib/methods\")(require(\"./plain\"));\n"],"file":"methods-plain.js"}

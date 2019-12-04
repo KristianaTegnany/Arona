@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/es-abstract/es7.js"],"names":["module","exports","require"],"mappings":"AAAA;;AAEAA,MAAM,CAACC,OAAP,GAAiBC,OAAO,CAAC,UAAD,CAAxB","sourcesContent":["'use strict';\n\nmodule.exports = require('./es2016');\n"],"file":"es7.js"}

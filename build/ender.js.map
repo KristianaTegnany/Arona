@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/moment/ender.js"],"names":["$","ender","moment","require"],"mappings":"AAAAA,CAAC,CAACC,KAAF,CAAQ;AAAEC,EAAAA,MAAM,EAAEC,OAAO,CAAC,QAAD;AAAjB,CAAR","sourcesContent":["$.ender({ moment: require('moment') })\n"],"file":"ender.js"}

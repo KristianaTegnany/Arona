@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/source-map-support/register.js"],"names":["require","install"],"mappings":"AAAAA,OAAO,CAAC,IAAD,CAAP,CAAcC,OAAd","sourcesContent":["require('./').install();\n"],"file":"register.js"}

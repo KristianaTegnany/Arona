@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/util-deprecate/node.js"],"names":["module","exports","require","deprecate"],"mappings":"AACA;;;AAIAA,MAAM,CAACC,OAAP,GAAiBC,OAAO,CAAC,MAAD,CAAP,CAAgBC,SAAjC","sourcesContent":["\n/**\n * For Node.js, simply re-export the core `util.deprecate` function.\n */\n\nmodule.exports = require('util').deprecate;\n"],"file":"node.js"}
