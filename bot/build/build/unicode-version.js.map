@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/regenerate-unicode-properties/unicode-version.js"],"names":["module"],"mappings":";;AAAAA,MAAM,CAANA,OAAAA,GAAAA,QAAAA","sourcesContent":["module.exports = '12.1.0';\n"],"file":"unicode-version.js"}

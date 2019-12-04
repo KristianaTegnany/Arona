@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/es5-ext/global.js"],"names":["module"],"mappings":";;AAAA;AAEAA,MAAM,CAANA,OAAAA,GAAkB,YAAY;AAC7B,SAAA,IAAA;AADDA,CAAkB,EAAlBA","sourcesContent":["/* eslint strict: \"off\" */\n\nmodule.exports = (function () {\n\treturn this;\n}());\n"],"file":"global.js"}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/string.prototype.trimright/auto.js"],"names":["require"],"mappings":"AAAA;;AAEAA,OAAO,CAAC,QAAD,CAAP","sourcesContent":["'use strict';\n\nrequire('./shim')();\n"],"file":"auto.js"}

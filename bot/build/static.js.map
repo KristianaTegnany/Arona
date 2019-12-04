@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/builtin-modules/static.js"],"names":["module","exports","require"],"mappings":"AAAA;;AACAA,MAAM,CAACC,OAAP,GAAiBC,OAAO,CAAC,mBAAD,CAAxB","sourcesContent":["'use strict';\nmodule.exports = require('./builtin-modules');\n"],"file":"static.js"}

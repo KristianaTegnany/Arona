@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/neo-async/someSeries.js"],"names":["module","exports","require","someSeries"],"mappings":"AAAA;;AAEAA,MAAM,CAACC,OAAP,GAAiBC,OAAO,CAAC,SAAD,CAAP,CAAmBC,UAApC","sourcesContent":["'use strict';\n\nmodule.exports = require('./async').someSeries;\n"],"file":"someSeries.js"}

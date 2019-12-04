@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/neo-async/autoInject.js"],"names":["module","exports","require","autoInject"],"mappings":"AAAA;;AAEAA,MAAM,CAACC,OAAP,GAAiBC,OAAO,CAAC,SAAD,CAAP,CAAmBC,UAApC","sourcesContent":["'use strict';\n\nmodule.exports = require('./async').autoInject;\n"],"file":"autoInject.js"}

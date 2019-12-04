@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/nan/include_dirs.js"],"names":["console","log","require","relative","__dirname"],"mappings":"AAAAA,OAAO,CAACC,GAAR,CAAYC,OAAO,CAAC,MAAD,CAAP,CAAgBC,QAAhB,CAAyB,GAAzB,EAA8BC,SAA9B,CAAZ","sourcesContent":["console.log(require('path').relative('.', __dirname));\n"],"file":"include_dirs.js"}

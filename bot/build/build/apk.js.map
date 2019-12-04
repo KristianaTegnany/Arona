@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/apk/apk.js"],"names":["require"],"mappings":"AAAA;;;AAEAA,OAAO,CAAPA,WAAO,CAAPA","sourcesContent":["#!/usr/bin/env node\n\nrequire('./lib/cli');"],"file":"apk.js"}

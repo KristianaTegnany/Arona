@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/cli-color/reset.js"],"names":["module"],"mappings":"AAAA;;AAEAA,MAAM,CAANA,OAAAA,GAAAA,kBAAAA","sourcesContent":["'use strict';\n\nmodule.exports = '\\x1b[2J\\x1b[0;0H';\n"],"file":"reset.js"}

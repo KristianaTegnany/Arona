@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/copy-concurrently/is-windows.js"],"names":["module","process"],"mappings":"AAAA;;AACAA,MAAM,CAANA,OAAAA,GAAiBC,OAAO,CAAPA,QAAAA,KAAjBD,OAAAA","sourcesContent":["'use strict'\nmodule.exports = process.platform === 'win32'\n"],"file":"is-windows.js"}

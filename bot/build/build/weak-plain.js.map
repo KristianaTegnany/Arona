@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/memoizee/weak-plain.js"],"names":["module","require"],"mappings":"AAAA;;AAEAA,MAAM,CAANA,OAAAA,GAAiBC,OAAO,CAAPA,YAAO,CAAPA,CAAsBA,OAAO,CAA9CD,SAA8C,CAA7BC,CAAjBD","sourcesContent":["\"use strict\";\n\nmodule.exports = require(\"./lib/weak\")(require(\"./plain\"));\n"],"file":"weak-plain.js"}

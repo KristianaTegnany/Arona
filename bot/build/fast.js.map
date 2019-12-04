@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/neo-async/fast.js"],"names":["module","exports","require","fast"],"mappings":"AAAA;;AAEAA,MAAM,CAACC,OAAP,GAAiBC,OAAO,CAAC,SAAD,CAAP,CAAmBC,IAApC","sourcesContent":["'use strict';\n\nmodule.exports = require('./async').fast;\n"],"file":"fast.js"}

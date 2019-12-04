@@ -1,0 +1,1 @@
+{"version":3,"sources":["../node_modules/loose-envify/custom.js"],"names":["module","exports","require"],"mappings":"AAAA;AACA;;AAEAA,MAAM,CAACC,OAAP,GAAiBC,OAAO,CAAC,gBAAD,CAAxB","sourcesContent":["// envify compatibility\n'use strict';\n\nmodule.exports = require('./loose-envify');\n"],"file":"custom.js"}
